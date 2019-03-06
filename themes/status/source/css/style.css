@@ -381,9 +381,21 @@ header {
               width: 50%; }
               header nav ul li.has-submenu .submenu ul li a {
                 padding: 10px 20px 10px 0;
-                color: #3C4049; }
+                color: #3C4049;
+                font-family: "Manrope", sans-serif;
+                font-weight: 600; }
                 header nav ul li.has-submenu .submenu ul li a:after {
                   background-image: url(../img/icon-arrow-right.svg); }
+                header nav ul li.has-submenu .submenu ul li a.external:after {
+                  content: '';
+                  width: 11px;
+                  height: 11px;
+                  background-image: url("../img/icon-external.svg"); }
+          header nav ul li.has-submenu .submenu .social-links {
+            flex-wrap: nowrap; }
+            header nav ul li.has-submenu .submenu .social-links li {
+              margin-right: 10px;
+              width: auto; }
         header nav ul li a {
           padding: 10px 30px;
           font-size: 16px;
@@ -391,6 +403,9 @@ header {
           font-weight: 600;
           display: flex;
           align-items: center; }
+          header nav ul li a.link-arrow {
+            font-family: "Manrope", sans-serif;
+            font-weight: 700; }
           header nav ul li a .arrow {
             width: 9px;
             height: 5px;
@@ -560,8 +575,24 @@ footer {
     width: 100%;
     height: auto; }
 
-.features-open-source .get-status {
+.get-status {
   background-color: #4360DF;
   padding: 50px; }
-  .features-open-source .get-status h3, .features-open-source .get-status p {
+  .get-status h3, .get-status p {
     color: #ffffff; }
+
+/*------SECURITY-----*/
+.security-page {
+  padding-top: 130px; }
+  .security-page h2 {
+    max-width: 500px;
+    margin-bottom: 70px;
+    margin-top: 80px;
+    font-weight: 500; }
+  .security-page h3 {
+    margin-top: 60px; }
+  .security-page h3:first-child {
+    margin-top: 0; }
+  .security-page .col-md-4 {
+    margin-bottom: 140px;
+    padding-right: 40px; }

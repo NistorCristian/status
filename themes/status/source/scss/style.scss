@@ -423,10 +423,27 @@ header{
                                 a{
                                     padding: 10px 20px 10px 0;
                                     color: $dark-grey;
+                                    font-family: $manrope;
+                                    font-weight: $manrope-semi-bold;
                                     &:after{
                                         background-image: url(../img/icon-arrow-right.svg);
                                     }
+                                    &.external{
+                                        &:after{
+                                            content: '';
+                                            width: 11px;
+                                            height: 11px;
+                                            background-image: url('../img/icon-external.svg');
+                                        }
+                                    }
                                 }
+                            }
+                        }
+                        .social-links{
+                            flex-wrap: nowrap;
+                            li{
+                                margin-right: 10px;
+                                width: auto;
                             }
                         }
                     }
@@ -438,6 +455,10 @@ header{
                     font-weight: $manrope-semi-bold;
                     display: flex;
                     align-items: center;
+                    &.link-arrow{
+                        font-family: $manrope;
+                        font-weight: $manrope-bold;
+                    }
                     .arrow{
                         width: 9px;
                         height: 5px;
@@ -698,12 +719,32 @@ footer{
     }
 }
 
-.features-open-source{
-    .get-status{
-        background-color: $purple;
-        padding: 50px;
-        h3, p{
-            color: $white;
-        }
+.get-status{
+    background-color: $purple;
+    padding: 50px;
+    h3, p{
+        color: $white;
+    }
+}
+
+/*------SECURITY-----*/
+
+.security-page{
+    padding-top: 130px;
+    h2{
+        max-width: 500px;
+        margin-bottom: 70px;
+        margin-top: 80px;
+        font-weight: $manrope-medium;
+    }
+    h3{
+        margin-top: 60px;
+    }
+    h3:first-child{
+        margin-top: 0;
+    }
+    .col-md-4{
+        margin-bottom: 140px;
+        padding-right: 40px;
     }
 }
