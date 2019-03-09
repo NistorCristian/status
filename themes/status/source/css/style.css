@@ -596,3 +596,146 @@ footer {
   .security-page .col-md-4 {
     margin-bottom: 140px;
     padding-right: 40px; }
+
+/*-------ABOUT-PAGE------*/
+.about-mission .inner {
+  text-align: center; }
+  .about-mission .inner .inline-links {
+    justify-content: center; }
+  .about-mission .inner blockquote {
+    margin-top: 100px; }
+    .about-mission .inner blockquote .teaser-1 {
+      margin-bottom: 20px;
+      position: relative; }
+    .about-mission .inner blockquote .teaser-1:before {
+      content: '';
+      width: 26px;
+      height: 25px;
+      background-image: url("../img/quotes.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: -5px;
+      left: -35px; }
+    .about-mission .inner blockquote span {
+      font-family: "Manrope", sans-serif;
+      line-height: 22px;
+      color: #000000; }
+
+.about-full-image {
+  width: 100%;
+  height: 650px;
+  background-image: url("../img/about-full-img.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.about-principles .teaser-2 {
+  max-width: 650px;
+  margin-bottom: 120px; }
+
+.about-principles ol {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; }
+  .about-principles ol li {
+    width: 45%; }
+  .about-principles ol li:nth-child(even) {
+    margin-left: 80px; }
+
+.about-chat {
+  background-color: #EAECEF; }
+  .about-chat .teaser-2 {
+    max-width: 760px;
+    margin-bottom: 80px; }
+  .about-chat .link-arrow-black {
+    line-height: 21px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700; }
+    .about-chat .link-arrow-black img {
+      margin-right: 15px; }
+  .about-chat .inline-links li {
+    margin-right: 90px; }
+    .about-chat .inline-links li .img-holder {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px; }
+    .about-chat .inline-links li a {
+      font-size: 18px;
+      font-family: "Manrope", sans-serif;
+      font-weight: 400;
+      color: #000000; }
+  .about-chat .inline-links li:last-child {
+    margin-right: 0; }
+  .about-chat .inner {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px; }
+    .about-chat .inner .title {
+      margin-bottom: 0;
+      line-height: 22px;
+      font-family: "Manrope", sans-serif;
+      font-weight: 500;
+      color: #000000; }
+    .about-chat .inner ul {
+      display: flex;
+      padding: 0;
+      margin-bottom: 0; }
+      .about-chat .inner ul li {
+        list-style-type: none; }
+        .about-chat .inner ul li .tag {
+          color: #4360DF;
+          font-size: 12px;
+          line-height: 17px;
+          font-family: "Manrope", sans-serif;
+          font-weight: 600; }
+        .about-chat .inner ul li .number {
+          color: #9299A3;
+          font-size: 13px;
+          margin-left: 10px; }
+    .about-chat .inner .authors {
+      margin-top: 20px; }
+      .about-chat .inner .authors li {
+        margin-right: -7px; }
+
+.about-core-contributors .contributors {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0; }
+  .about-core-contributors .contributors li {
+    margin-left: 44px;
+    list-style-type: none; }
+  .about-core-contributors .contributors li:first-child {
+    margin-left: 0; }
+
+/*----- APPS-PAGE -----*/
+.apps-page .buttons {
+  padding: 0;
+  display: flex;
+  margin-bottom: 130px; }
+  .apps-page .buttons li {
+    list-style-type: none;
+    margin-right: 20px; }
+    .apps-page .buttons li a img {
+      margin-right: 15px; }
+  .apps-page .buttons li:last-child {
+    margin-right: 0; }
+
+.apps-page .apps-mobile .inner {
+  padding-top: 130px; }
+
+.apps-page .apps-mac-windows-or-linux .inner {
+  padding-left: 90px; }
+  .apps-page .apps-mac-windows-or-linux .inner .buttons {
+    margin-bottom: 45px; }
+  .apps-page .apps-mac-windows-or-linux .inner .news {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5); }
