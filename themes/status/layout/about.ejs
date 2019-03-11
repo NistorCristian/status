@@ -24,9 +24,24 @@
 	</section>
 	<!-- END-ABOUT-MISSION -->
 
-	<!-- ABOUT-FULL-IMG -->
-	<section class="about-full-image"></section>
-	<!-- END-FULL-IMG -->
+	<!-- ABOUT-GALLERY -->
+	<section class="about-gallery">
+		<div class="gallery">
+			<div class="gallery-row">
+				<div class="gallery-image"><%- image_tag("/img/about-img-1.jpg", {srcset: "/img/about-img-1-2x.jpg 2x"}) %></div>
+				<div class="gallery-image"><%- image_tag("/img/about-img-2.jpg", {srcset: "/img/about-img-2-2x.jpg 2x"}) %></div>
+				<div class="gallery-image"><%- image_tag("/img/about-img-3.jpg", {srcset: "/img/about-img-3-2x.jpg 2x"}) %></div>
+				<div class="gallery-image"><%- image_tag("/img/about-img-4.jpg", {srcset: "/img/about-img-4-2x.jpg 2x"}) %></div>
+			</div>
+			<div class="gallery-row">
+				<div class="gallery-image"><%- image_tag("/img/about-img-5.jpg", {srcset: "/img/about-img-5-2x.jpg 2x"}) %></div>
+				<div class="gallery-image"><%- image_tag("/img/about-img-6.jpg", {srcset: "/img/about-img-6-2x.jpg 2x"}) %></div>
+				<div class="gallery-image"><%- image_tag("/img/about-img-7.jpg", {srcset: "/img/about-img-7-2x.jpg 2x"}) %></div>
+				<div class="gallery-image"><%- image_tag("/img/about-img-8.jpg", {srcset: "/img/about-img-8-2x.jpg 2x"}) %></div>
+			</div>
+		</div>
+	</section>
+	<!-- END-ABOUT-GALLERY -->
 
 	<!-- ABOUT-PRINCIPLES -->
 	<section class="about-principles p-t-160 p-b-160">
@@ -35,48 +50,48 @@
 				<div class="col-md-12">
 					<h3>Our Principles</h3>
 					<p class="teaser-2">The goal of Status is widespread adoption of the decentralized web. Our challenge is achieving mass adoption while staying true to our principles outlined below.</p>
-					<ol type="I">
-						<li>
-							<h4 class="m-b-25">Liberty</h4>
-							<p>We believe in the sovereignty of individuals. As a platform that stands for the cause of personal liberty, we aim to maximize social, political, and economic freedoms. This includes being coercion-resistant.</p>
-						</li>
-						<li>
-							<h4 class="m-b-25">Censorship Resistance</h4>
-							<p>We enable free flow of information. No content is under surveillance. We abide by the cryptoeconomic design principle of censorship resistance. Even stronger, Status is an agnostic platform for information.</p>
-						</li>
-						<li>
-							<h4 class="m-b-25 m-t-90">Security</h4>
-							<p>We don’t compromise on security when building features. We use state-of-the-art technologies, and research new security methods and technologies to make strong security guarantees.</p>
-						</li>
-						<li>
-							<h4 class="m-b-25 m-t-90">Privacy</h4>
-							<p>Privacy is the power to selectively reveal oneself to the world. For us, it’s essential to protect privacy in both communications and transactions, as well as being a pseudo-anonymous platform. Additionally, we strive to provide the right of total anonymity.</p>
-						</li>
-						<li>
-							<h4 class="m-b-25 m-t-90">Transparency</h4>
-							<p>We strive for complete openness and symmetry of information within the organization, and have no border between our core contributors and our community. We are frank about our shortcomings, especially when making short-term tradeoffs in service of our long-term goals.</p>
-						</li>
-						<li>
-							<h4 class="m-b-25 m-t-90">Openness</h4>
-							<p>The software we create is a public good. It is made available via a free and open source license, for anyone to share, modify and benefit from. We believe in permission-less participation.</p>
-						</li>
-						<li>
-							<h4 class="m-b-25 m-t-90">Decentralization</h4>
-							<p>We minimize centralization across both the software and the organization itself. In other words, we maximize the number of physical computers composing the network, and maximize the number of individuals who have control over the system(s) we are building.</p>
-						</li>
-						<li>
-							<h4 class="m-b-25 m-t-90">Inclusivity</h4>
-							<p>We believe in fair and widespread access to our software, with an emphasis on ease-of-use. This also extends to social inclusivity, permissionless participation, interoperability, and investing in educational efforts.</p>
-						</li>
-						<li>
-							<h4 class="m-b-25 m-t-90">Continuance</h4>
-							<p>We create software incentivized to continue to exist and improve, without the stewardship of a single entity or any of the current team members.</p>
-						</li>
-						<li>
-							<h4 class="m-b-25 m-t-90">Resourcefulness</h4>
-							<p>We are relentlessly resourceful. As we grow and have ready access to capital, it is our obligation to token holders to fight bureaucracy and inefficiencies within the organization. This means solving problems in the most effective way possible at lower economic costs (in terms of capital, time and resources).</p>
-						</li>
-					</ol>
+				</div>
+			</div>
+			<div class="row roman-list">
+				<div class="col-md-6">
+					<h4 class="m-b-25" data-roman="I">Liberty</h4>
+					<p>We believe in the sovereignty of individuals. As a platform that stands for the cause of personal liberty, we aim to maximize social, political, and economic freedoms. This includes being coercion-resistant.</p>
+				</div>
+				<div class="col-md-6">
+					<h4 class="m-b-25" data-roman="II">Censorship Resistance</h4>
+					<p>We enable free flow of information. No content is under surveillance. We abide by the cryptoeconomic design principle of censorship resistance. Even stronger, Status is an agnostic platform for information.</p>
+				</div>
+				<div class="col-md-6">
+					<h4 class="m-b-25 m-t-90" data-roman="III">Security</h4>
+					<p>We don’t compromise on security when building features. We use state-of-the-art technologies, and research new security methods and technologies to make strong security guarantees.</p>
+				</div>
+				<div class="col-md-6">
+					<h4 class="m-b-25 m-t-90" data-roman="IV">Privacy</h4>
+					<p>Privacy is the power to selectively reveal oneself to the world. For us, it’s essential to protect privacy in both communications and transactions, as well as being a pseudo-anonymous platform. Additionally, we strive to provide the right of total anonymity.</p>
+				</div>
+				<div class="col-md-6">
+					<h4 class="m-b-25 m-t-90" data-roman="V">Transparency</h4>
+					<p>We strive for complete openness and symmetry of information within the organization, and have no border between our core contributors and our community. We are frank about our shortcomings, especially when making short-term tradeoffs in service of our long-term goals.</p>
+				</div>
+				<div class="col-md-6">
+					<h4 class="m-b-25 m-t-90" data-roman="VI">Openness</h4>
+					<p>The software we create is a public good. It is made available via a free and open source license, for anyone to share, modify and benefit from. We believe in permission-less participation.</p>
+				</div>
+				<div class="col-md-6">
+					<h4 class="m-b-25 m-t-90" data-roman="VII">Decentralization</h4>
+					<p>We minimize centralization across both the software and the organization itself. In other words, we maximize the number of physical computers composing the network, and maximize the number of individuals who have control over the system(s) we are building.</p>
+				</div>
+				<div class="col-md-6">
+					<h4 class="m-b-25 m-t-90" data-roman="VIII">Inclusivity</h4>
+					<p>We believe in fair and widespread access to our software, with an emphasis on ease-of-use. This also extends to social inclusivity, permissionless participation, interoperability, and investing in educational efforts.</p>
+				</div>
+				<div class="col-md-6">
+					<h4 class="m-b-25 m-t-90" data-roman="IX">Continuance</h4>
+					<p>We create software incentivized to continue to exist and improve, without the stewardship of a single entity or any of the current team members.</p>
+				</div>
+				<div class="col-md-6">
+					<h4 class="m-b-25 m-t-90" data-roman="X">Resourcefulness</h4>
+					<p>We are relentlessly resourceful. As we grow and have ready access to capital, it is our obligation to token holders to fight bureaucracy and inefficiencies within the organization. This means solving problems in the most effective way possible at lower economic costs (in terms of capital, time and resources).</p>
 				</div>
 			</div>
 		</div>
@@ -89,207 +104,203 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h3>How we work</h3>
-					<p class="teaser-2">We are a team distributed across the world. We have no office. We work in Swarms. Swarms are small teams of 2-5 people with a very specific goal. Swarms follow a structured approach to developing features:</p>
+					<p class="teaser-2">We are a team distributed across the world. We have no office. <br>We work in Swarms. Swarms are small teams of 2-5 people with a very <br>specific goal. Swarms follow a structured approach to developing features:</p>
 					<ul class="inline-links">
 						<li>
 							<div class="img-holder">
-								<%- image_tag("img/research.svg") %>
+								<%- image_tag("/img/research.svg") %>
 							</div>
-							<a href="#">Research</a>
+							Research
 						</li>
 						<li>
 							<div class="img-holder">
-								<%- image_tag("img/specifications-and-planning.svg") %>
+								<%- image_tag("/img/specifications-and-planning.svg") %>
 							</div>
-							<a href="#">Specifications & Planning</a>
+							Specifications & Planning
 						</li>
 						<li>
 							<div class="img-holder">
-								<%- image_tag("img/implementation.svg") %>
+								<%- image_tag("/img/implementation.svg") %>
 							</div>
-							<a href="#">Implementation</a>
+							Implementation
 						</li>
 						<li>
 							<div class="img-holder">
-								<%- image_tag("img/communication-and-post-mortem.svg") %>
+								<%- image_tag("/img/communication-and-post-mortem.svg") %>
 							</div>
-							<a href="#">Communication & Post-mortem</a>
+							Communication & Post-mortem
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6 m-t-90">
+				<div class="col-md-12 m-t-90 inline">
 					<h3>Active Swarms</h3>
+					<a href="https://github.com/status-im/swarms" target="_blank" class="link-arrow-black"><%- image_tag("/img/tiny-logo.svg") %> View all Swarms on Github</a>
 				</div>
-				<div class="col-md-6 m-t-90 text-right">
-					<a href="#" class="link-arrow-black"><%- image_tag("img/tiny-logo.svg") %> View all Swarms on Github</a>
-				</div>
-			</div>
-			<div class="row">
 				<div class="col-md-3">
 					<div class="inner">
-						<p class="title">Core Network Incentives</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#316</span></li>
-						</ul>
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/316-core-network-incentives.md" target="_blank" class="title">Core Network Incentives</a>
+						<div class="swarm-meta">
+							SNT Utility
+							<span class="number">#316</span>
+						</div>
 						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
+							<li><%- image_tag("/img/contributor-1.png", { srcset: '/img/contributor-1-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-2.png", { srcset: '/img/contributor-2-2x.png 2x'}) %></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="inner">
-						<p class="title">Sticker Market</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#313</span></li>
-						</ul>
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/313-sticker-market/readme.md" target="_blank" class="title">Sticker Market</a>
+						<div class="swarm-meta">
+							SNT Utility
+							<span class="number">#313</span>
+						</div>
 						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-3.png") %></a></li>
+							<li><%- image_tag("/img/contributor-3.png", { srcset: '/img/contributor-3-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-4.png", { srcset: '/img/contributor-4-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-5.png", { srcset: '/img/contributor-5-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-6.png", { srcset: '/img/contributor-6-2x.png 2x'}) %></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="inner">
-						<p class="title">Core Network Incentives</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#316</span></li>
-						</ul>
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/314-tribute-to-talk/README.md" target="_blank" class="title">Tribute to Talk</a>
+						<div class="swarm-meta">
+							SNT Utility
+							<span class="number">#314</span>
+						</div>
 						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
+							<li><%- image_tag("/img/contributor-7.png", { srcset: '/img/contributor-7-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-8.png", { srcset: '/img/contributor-8-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-9.png", { srcset: '/img/contributor-9-2x.png 2x'}) %></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="inner">
-						<p class="title">Sticker Market</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#313</span></li>
-						</ul>
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/317-dapps-store.md" target="_blank" class="title">DApp Store</a>
+						<div class="swarm-meta">
+							SNT Utility
+							<span class="number">#317</span>
+						</div>
 						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-3.png") %></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="inner">
-						<p class="title">Core Network Incentives</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#316</span></li>
-						</ul>
-						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
+							<li><%- image_tag("/img/contributor-10.png", { srcset: '/img/contributor-10-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-11.png", { srcset: '/img/contributor-11-2x.png 2x'}) %></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="inner">
-						<p class="title">Sticker Market</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#313</span></li>
-						</ul>
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/321-teller-network.md" target="_blank" class="title">Teller Network</a>
+						<div class="swarm-meta">
+							SNT Utility
+							<span class="number">#321</span>
+						</div>
 						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-3.png") %></a></li>
+							<li><%- image_tag("/img/contributor-12.png", { srcset: '/img/contributor-12-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-13.png", { srcset: '/img/contributor-13-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-14.png", { srcset: '/img/contributor-14-2x.png 2x'}) %></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="inner">
-						<p class="title">Core Network Incentives</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#316</span></li>
-						</ul>
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/315-core-improvements.md" target="_blank" class="title">Core Improvements</a>
+						<div class="swarm-meta">
+							Essentials
+							<span class="number">#315</span>
+						</div>
 						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
+							<li><%- image_tag("/img/contributor-15.png", { srcset: '/img/contributor-15-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-16.png", { srcset: '/img/contributor-16-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-17.png", { srcset: '/img/contributor-17-2x.png 2x'}) %></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="inner">
-						<p class="title">Sticker Market</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#313</span></li>
-						</ul>
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/311-status-protocol.md" target="_blank" class="title">Protocol</a>
+						<div class="swarm-meta">
+							Essentials
+							<span class="number">#311</span>
+						</div>
 						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-3.png") %></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="inner">
-						<p class="title">Core Network Incentives</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#316</span></li>
-						</ul>
-						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
+							<li><%- image_tag("/img/contributor-18.png", { srcset: '/img/contributor-18-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-19.png", { srcset: '/img/contributor-19-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-20.png", { srcset: '/img/contributor-20-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-21.png", { srcset: '/img/contributor-21-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-22.png", { srcset: '/img/contributor-22-2x.png 2x'}) %></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="inner">
-						<p class="title">Sticker Market</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#313</span></li>
-						</ul>
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/322-dao.md" target="_blank" class="title">DAO</a>
+						<div class="swarm-meta">
+							Essentials
+							<span class="number">#322</span>
+						</div>
 						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-3.png") %></a></li>
+							<li><%- image_tag("/img/contributor-23.png", { srcset: '/img/contributor-23-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-24.png", { srcset: '/img/contributor-24-2x.png 2x'}) %></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="inner">
-						<p class="title">Core Network Incentives</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#316</span></li>
-						</ul>
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/312-swarm-janitors.md" target="_blank" class="title">Janitors</a>
+						<div class="swarm-meta">
+							Essentials
+							<span class="number">#312</span>
+						</div>
 						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
+							<li><%- image_tag("/img/contributor-25.png", { srcset: '/img/contributor-25-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-26.png", { srcset: '/img/contributor-26-2x.png 2x'}) %></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="inner">
-						<p class="title">Sticker Market</p>
-						<ul>
-							<li><a href="#" class="tag">SNT Utility</a></li>
-							<li><span class="number">#313</span></li>
-						</ul>
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/310-core.md" target="_blank" class="title">Core</a>
+						<div class="swarm-meta">
+							Teams
+							<span class="number">#310</span>
+						</div>
 						<ul class="authors">
-							<li><a href="#"><%- image_tag("img/author-1.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-2.png") %></a></li>
-							<li><a href="#"><%- image_tag("img/author-3.png") %></a></li>
+							<li><%- image_tag("/img/contributor-27.png", { srcset: '/img/contributor-27-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-28.png", { srcset: '/img/contributor-28-2x.png 2x'}) %></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="inner">
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/306-core-browser.md" target="_blank" class="title">Core Browser</a>
+						<div class="swarm-meta">
+							Teams
+							<span class="number">#306</span>
+						</div>
+						<ul class="authors">
+							<li><%- image_tag("/img/contributor-29.png", { srcset: '/img/contributor-29-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-30.png", { srcset: '/img/contributor-30-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-31.png", { srcset: '/img/contributor-31-2x.png 2x'}) %></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="inner">
+						<a href="https://github.com/status-im/swarms/blob/master/ideas/304-core-chat.md" target="_blank" class="title">Core Chat</a>
+						<div class="swarm-meta">
+							Teams
+							<span class="number">#304</span>
+						</div>
+						<ul class="authors">
+							<li><%- image_tag("/img/contributor-32.png", { srcset: '/img/contributor-32-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-33.png", { srcset: '/img/contributor-33-2x.png 2x'}) %></li>
+							<li><%- image_tag("/img/contributor-34.png", { srcset: '/img/contributor-34-2x.png 2x'}) %></li>
 						</ul>
 					</div>
 				</div>
@@ -317,56 +328,20 @@
 			<div class="row">
 				<div class="col-md-12">
 					<ul class="contributors m-t-90">
-						<li><a href="#"><%- image_tag("img/contributor-1.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-2.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-3.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-4.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-5.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-6.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-7.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-1.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-2.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-3.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-4.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-5.png") %></a></li>
-					</ul>
-					<ul class="contributors m-t-40">
-						<li><a href="#"><%- image_tag("img/contributor-1.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-2.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-3.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-4.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-5.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-6.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-7.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-1.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-2.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-3.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-4.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-5.png") %></a></li>
-					</ul>
-					<ul class="contributors m-t-40">
-						<li><a href="#"><%- image_tag("img/contributor-1.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-2.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-3.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-4.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-5.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-6.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-7.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-1.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-2.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-3.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-4.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-5.png") %></a></li>
-					</ul>
-					<ul class="contributors m-t-40">
-						<li><a href="#"><%- image_tag("img/contributor-1.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-2.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-3.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-4.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-5.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-6.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-7.png") %></a></li>
-						<li><a href="#"><%- image_tag("img/contributor-1.png") %></a></li>
+						<% for(var i=1; i <= 44; i++) { %>
+						<li class="contributor">
+							<a href="#"><%- image_tag("/img/core-contributor-"+ i + ".png") %></a>
+							<div class="contributor-info">
+								<%- image_tag("/img/core-contributor-"+ i + ".png") %>
+								<b>Ivan Morais <%= i %></b>
+								<span>Engineering</span>
+								<ul>
+									<li><a href="#"><%- image_tag("/img/icon-status-purple.svg") %></a></li>
+									<li><a href="#"><%- image_tag("/img/icon-github-purple.svg") %></a></li>
+								</ul>
+							</div>
+						</li>
+						<% } %>
 					</ul>
 				</div>
 			</div>
