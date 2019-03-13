@@ -2,16 +2,16 @@
 <main id="main" role="main">
 
 	<!-- ABOUT-MISSION -->
-	<section class="about-mission p-t-160 p-b-160">
+	<section class="about-mission p-t-160">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5 mr-auto ml-auto">
+				<div class="col-md-12">
 					<div class="inner">
 						<h1>The Mission</h1>
 						<ul class="inline-links">
-							<li><a href="#">Our Principles</a></li>
-							<li><a href="#">How we work</a></li>
-							<li><a href="#">Core Contributors</a></li>
+							<li><a href="#our-principles">Our Principles</a></li>
+							<li><a href="#how-we-work">How we work</a></li>
+							<li><a href="#core-contributors">Core Contributors</a></li>
 						</ul>
 						<blockquote>
 							<p class="teaser-1">But Status is also more than a product, it is an experiment in organization.</p>
@@ -25,26 +25,13 @@
 	<!-- END-ABOUT-MISSION -->
 
 	<!-- ABOUT-GALLERY -->
-	<section class="about-gallery">
-		<div class="gallery">
-			<div class="gallery-row">
-				<div class="gallery-image"><%- image_tag("/img/about-img-1.jpg", {srcset: "/img/about-img-1-2x.jpg 2x"}) %></div>
-				<div class="gallery-image"><%- image_tag("/img/about-img-2.jpg", {srcset: "/img/about-img-2-2x.jpg 2x"}) %></div>
-				<div class="gallery-image"><%- image_tag("/img/about-img-3.jpg", {srcset: "/img/about-img-3-2x.jpg 2x"}) %></div>
-				<div class="gallery-image"><%- image_tag("/img/about-img-4.jpg", {srcset: "/img/about-img-4-2x.jpg 2x"}) %></div>
-			</div>
-			<div class="gallery-row">
-				<div class="gallery-image"><%- image_tag("/img/about-img-5.jpg", {srcset: "/img/about-img-5-2x.jpg 2x"}) %></div>
-				<div class="gallery-image"><%- image_tag("/img/about-img-6.jpg", {srcset: "/img/about-img-6-2x.jpg 2x"}) %></div>
-				<div class="gallery-image"><%- image_tag("/img/about-img-7.jpg", {srcset: "/img/about-img-7-2x.jpg 2x"}) %></div>
-				<div class="gallery-image"><%- image_tag("/img/about-img-8.jpg", {srcset: "/img/about-img-8-2x.jpg 2x"}) %></div>
-			</div>
-		</div>
+	<section class="about-gallery m-t-90">
+		<%- image_tag("/img/about-gallery.jpg") %>
 	</section>
 	<!-- END-ABOUT-GALLERY -->
 
 	<!-- ABOUT-PRINCIPLES -->
-	<section class="about-principles p-t-160 p-b-160">
+	<section class="about-principles p-t-160 p-b-160" id="our-principles">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -99,7 +86,7 @@
 	<!-- END-ABOUT-PRINCIPLES -->
 
 	<!-- ABOUT-CHAT -->
-	<section class="about-chat p-t-160 p-b-160">
+	<section class="about-chat p-t-160 p-b-160" id="how-we-work">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -138,7 +125,7 @@
 					<h3>Active Swarms</h3>
 					<a href="https://github.com/status-im/swarms" target="_blank" class="link-arrow-black"><%- image_tag("/img/tiny-logo.svg") %> View all Swarms on Github</a>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/316-core-network-incentives.md" target="_blank" class="title">Core Network Incentives</a>
 						<div class="swarm-meta">
@@ -151,7 +138,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/313-sticker-market/readme.md" target="_blank" class="title">Sticker Market</a>
 						<div class="swarm-meta">
@@ -166,7 +153,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/314-tribute-to-talk/README.md" target="_blank" class="title">Tribute to Talk</a>
 						<div class="swarm-meta">
@@ -180,7 +167,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/317-dapps-store.md" target="_blank" class="title">DApp Store</a>
 						<div class="swarm-meta">
@@ -193,7 +180,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/321-teller-network.md" target="_blank" class="title">Teller Network</a>
 						<div class="swarm-meta">
@@ -207,7 +194,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/315-core-improvements.md" target="_blank" class="title">Core Improvements</a>
 						<div class="swarm-meta">
@@ -221,7 +208,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/311-status-protocol.md" target="_blank" class="title">Protocol</a>
 						<div class="swarm-meta">
@@ -237,7 +224,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/322-dao.md" target="_blank" class="title">DAO</a>
 						<div class="swarm-meta">
@@ -250,7 +237,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/312-swarm-janitors.md" target="_blank" class="title">Janitors</a>
 						<div class="swarm-meta">
@@ -263,7 +250,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/310-core.md" target="_blank" class="title">Core</a>
 						<div class="swarm-meta">
@@ -276,7 +263,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/306-core-browser.md" target="_blank" class="title">Core Browser</a>
 						<div class="swarm-meta">
@@ -290,7 +277,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div class="inner">
 						<a href="https://github.com/status-im/swarms/blob/master/ideas/304-core-chat.md" target="_blank" class="title">Core Chat</a>
 						<div class="swarm-meta">
@@ -310,7 +297,7 @@
 	<!-- END-ABOUT-CHAT -->
 
 	<!-- ABOUT-CORE-CONTRIBUTORS -->
-	<section class="about-core-contributors p-t-160 p-b-160">
+	<section class="about-core-contributors p-t-160 p-b-160" id="core-contributors">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7">
@@ -327,9 +314,9 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<ul class="contributors m-t-90">
+					<ul class="contributors row m-t-90">
 						<% for(var i=1; i <= 44; i++) { %>
-						<li class="contributor">
+						<li class="contributor col-md-1">
 							<a href="#"><%- image_tag("/img/core-contributor-"+ i + ".png") %></a>
 							<div class="contributor-info">
 								<%- image_tag("/img/core-contributor-"+ i + ".png") %>

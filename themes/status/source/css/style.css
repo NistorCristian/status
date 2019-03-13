@@ -587,9 +587,6 @@ footer {
       margin: 10px 0 0 0;
       line-height: 17px; }
 
-#main {
-  padding: 0 25px; }
-
 /*-----HOME-----*/
 .home-intro .inner {
   padding: 30px 0; }
@@ -641,27 +638,30 @@ footer {
 .features-chat .inner {
   padding: 135px 0 200px 0; }
   .features-chat .inner p {
-    max-width: 540px; }
+    max-width: 540px;
+    color: rgba(255, 255, 255, 0.8); }
 
 .features-chat .img-holder img {
   margin-top: -110px; }
 
-.features-wallet .col-md-4 {
-  margin-bottom: 100px; }
-
 .features-wallet .inner {
-  padding-right: 30px; }
+  padding-right: 30px;
+  margin-bottom: 100px; }
   .features-wallet .inner p {
     color: rgba(255, 255, 255, 0.8); }
+
+.features-wallet img {
+  max-width: 100%; }
 
 .features-browser {
   background-color: #EAECEF; }
   .features-browser h2 {
     font-weight: 500; }
   .features-browser .inner {
-    padding-right: 30px; }
+    padding-right: 30px;
+    margin-bottom: 100px; }
   .features-browser img {
-    margin-top: 50px; }
+    max-width: 100%; }
 
 .features-desktop {
   padding-top: 130px;
@@ -669,7 +669,8 @@ footer {
   .features-desktop .img-holder {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; }
+    align-items: flex-end;
+    margin-top: auto; }
   .features-desktop .announcement {
     font-family: "Manrope", sans-serif;
     margin-top: 40px;
@@ -700,7 +701,7 @@ footer {
     margin-top: 60px; }
     .security-inner h3:first-child {
       margin-top: 0; }
-  .security-inner .col-md-4 {
+  .security-inner .col-lg-4 {
     padding-right: 40px; }
   .security-inner .p-large::last-child {
     margin-bottom: 0; }
@@ -710,8 +711,16 @@ footer {
   text-align: center; }
   .about-mission .inner .inline-links {
     justify-content: center; }
+    .about-mission .inner .inline-links li {
+      margin: 0 25px;
+      width: auto; }
+      .about-mission .inner .inline-links li a {
+        font-family: "Manrope", sans-serif;
+        font-weight: 700;
+        font-size: 16px; }
   .about-mission .inner blockquote {
-    margin-top: 100px; }
+    max-width: 480px;
+    margin: 100px auto 0; }
     .about-mission .inner blockquote .teaser-1 {
       margin-bottom: 20px;
       position: relative; }
@@ -730,24 +739,8 @@ footer {
       line-height: 22px;
       color: #000000; }
 
-.gallery {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: calc(100% - 10px); }
-  .gallery .gallery-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 10px; }
-    .gallery .gallery-row .gallery-image {
-      margin: 0 5px; }
-      .gallery .gallery-row .gallery-image img {
-        display: flex;
-        object-fit: cover;
-        margin: 0;
-        width: 100%;
-        height: 100%; }
+.about-gallery img {
+  max-width: 100%; }
 
 .about-principles .teaser-2 {
   max-width: 650px;
@@ -782,9 +775,11 @@ footer {
     align-items: baseline;
     justify-content: space-between; }
   .about-chat .inline-links {
-    margin: 80px 0 20px; }
+    margin: 80px 0 0;
+    flex-wrap: wrap; }
     .about-chat .inline-links li {
-      margin-right: 80px;
+      width: auto;
+      margin: 0 80px 20px 0;
       font-size: 18px; }
       .about-chat .inline-links li .img-holder {
         width: 50px;
@@ -869,7 +864,7 @@ footer {
     width: 70px;
     height: 70px;
     position: relative;
-    margin: 0 44px 40px 0; }
+    margin: 0 0 40px 0; }
     .contributors .contributor:nth-child(12n) {
       margin-right: 0; }
     .contributors .contributor:hover .contributor-info {
@@ -930,10 +925,11 @@ footer {
 .apps-content .buttons {
   padding: 0;
   display: flex;
-  margin-bottom: 130px; }
+  margin-bottom: 130px;
+  flex-wrap: wrap; }
   .apps-content .buttons li {
     list-style-type: none;
-    margin-right: 20px; }
+    margin: 0 20px 10px 0; }
     .apps-content .buttons li a {
       display: flex; }
       .apps-content .buttons li a img {
@@ -947,7 +943,8 @@ footer {
 .apps-content .apps-mac-windows-or-linux .inner {
   padding-left: 90px; }
   .apps-content .apps-mac-windows-or-linux .inner .buttons {
-    margin-bottom: 45px; }
+    margin-bottom: 45px;
+    flex-wrap: wrap; }
 
 .apps-content .apps-mac-windows-or-linux .announcement {
   margin: 0 0 95px;
@@ -969,21 +966,32 @@ footer {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1370px; } }
+    max-width: 1420px;
+    padding-left: 40px;
+    padding-right: 40px; } }
 
 @media screen and (max-width: 1300px) {
   header nav ul li a {
     padding: 0 15px; } }
 
 @media screen and (max-width: 1199px) {
+  p {
+    line-height: 24px;
+    font-size: 14px; }
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px; }
   h1 {
     line-height: 44px;
     font-size: 38px; }
+  h2 {
+    line-height: 31px;
+    font-size: 31px; }
   h3 {
     line-height: 38px;
     font-size: 25px; }
+  h4 {
+    line-height: 28px;
+    font-size: 18px; }
   .teaser-1 {
     line-height: 26px;
     font-size: 16px;
@@ -1002,7 +1010,8 @@ footer {
     .btn:after {
       top: 14px; }
   .link-arrow {
-    font-size: 15px; }
+    font-size: 15px;
+    line-height: 19px; }
   .inline-links {
     flex-wrap: wrap; }
     .inline-links li {
@@ -1071,6 +1080,44 @@ footer {
       width: 100%; }
     .home-browser .inner .teaser-2 {
       margin-bottom: 10px; }
+  .features-chat .inner {
+    padding-bottom: 100px; }
+  .features-wallet .inner {
+    margin-bottom: 50px; }
+  .features-desktop img {
+    max-width: 150%; }
+  .features-browser .inner {
+    margin-bottom: 50px; }
+  .security-inner {
+    padding-top: 100px; }
+  .about-principles .roman-list h4 {
+    padding: 0 30px; }
+  .about-principles .roman-list p {
+    padding: 0 30px; }
+  .contributors .contributor img {
+    width: 50px;
+    height: 50px; }
+  .apps-content .apps-mobile .inner {
+    padding-top: 90px; }
+  .apps-content .apps-mobile img {
+    max-width: 100%; }
+  .apps-content .buttons {
+    margin-bottom: 60px; }
+  .apps-content .apps-mac-windows-or-linux {
+    padding-top: 50px; }
+    .apps-content .apps-mac-windows-or-linux .inner {
+      padding-left: 40px; }
+      .apps-content .apps-mac-windows-or-linux .inner .p-large {
+        max-width: 320px; }
+      .apps-content .apps-mac-windows-or-linux .inner .buttons {
+        margin-bottom: 10px; }
+    .apps-content .apps-mac-windows-or-linux .announcement {
+      margin-bottom: 40px;
+      font-size: 12px;
+      line-height: 18px; }
+    .apps-content .apps-mac-windows-or-linux .img-holder {
+      height: 240px;
+      width: calc(50vw - 55px); }
   footer .get-started {
     padding: 50px 0; }
   footer .connect h5 {
@@ -1083,6 +1130,15 @@ footer {
     width: 200%; }
   .home-browser .inner {
     padding-right: 0; }
+  .features-desktop {
+    padding-top: 60px; }
+  .security-inner .col-lg-4 {
+    padding-right: 40px;
+    margin-bottom: 30px; }
+    .security-inner .col-lg-4 h4 br {
+      display: none; }
+  .contributors .contributor {
+    margin: 0; }
   footer .get-started h3 {
     margin-bottom: 20px; }
   footer .get-started .inline {
@@ -1091,14 +1147,21 @@ footer {
       margin-left: 0; } }
 
 @media screen and (max-width: 767px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px; }
+  .m-b-25 {
+    margin-bottom: 10px; }
   .m-r-30 {
     margin-right: 15px; }
   .p-t-160 {
-    padding-top: 60px; }
+    padding-top: 50px; }
   .p-b-160 {
-    padding-bottom: 60px; }
-  #main {
-    padding: 0 5px; }
+    padding-bottom: 50px; }
+  .m-b-100 {
+    margin-bottom: 50px; }
+  .m-t-90 {
+    margin-top: 50px; }
   .btn {
     text-align: left;
     width: 100%; }
@@ -1133,12 +1196,115 @@ footer {
     order: -1; }
     .home-browser .inner {
       padding: 50px 0; }
+  .features-intro {
+    padding-top: 30px; }
+    .features-intro .inline-links {
+      display: none; }
+  .features-wallet .inner {
+    padding-right: 0; }
+  .features-chat .inner {
+    padding: 30px 0 50px 0; }
+  .features-chat .col-md-6:last-child {
+    order: -1; }
+    .features-chat .col-md-6:last-child .img-holder img {
+      margin-top: -54px;
+      max-width: calc(100% + 40px);
+      margin: -54px -20px 0;
+      display: block; }
+  .features-browser .inner {
+    padding-right: 0; }
+  .features-desktop {
+    padding-top: 0; }
+    .features-desktop .inner {
+      padding-bottom: 15px; }
+    .features-desktop .announcement {
+      margin-top: 20px; }
+  .features-open-source {
+    padding-bottom: 0; }
+  .get-status {
+    padding: 50px 20px;
+    margin: 30px -20px 0; }
+  .security-inner {
+    padding-top: 30px; }
+    .security-inner .m-b-100 {
+      margin-bottom: 20px; }
+    .security-inner h2 br {
+      display: none; }
+    .security-inner h3 {
+      margin-top: 50px; }
+    .security-inner .col-lg-4 {
+      margin-bottom: 20px;
+      padding-right: 15px; }
+    .security-inner .container:last-child {
+      padding-bottom: 0; }
+  .about-mission {
+    padding-top: 30px; }
+    .about-mission .inner {
+      text-align: left; }
+      .about-mission .inner blockquote {
+        display: none; }
+      .about-mission .inner .inline-links {
+        display: none;
+        justify-content: flex-start; }
+        .about-mission .inner .inline-links li {
+          margin: 0 0 10px 0;
+          width: 100%; }
+  .about-gallery {
+    margin-top: 20px; }
+  .about-principles .teaser-2 {
+    margin-bottom: 0; }
+  .about-principles .roman-list h4 {
+    margin-top: 40px; }
+  .about-principles .roman-list p {
+    padding: 0;
+    margin-bottom: 0; }
+  .about-chat .inline {
+    margin-top: 30px; }
+  .about-chat .inline-links {
+    margin-top: 50px; }
+  .about-chat .link-arrow-black {
+    display: none; }
+  .about-chat .inner {
+    margin: 0 -10px 10px -10px; }
+  .contributors .contributor img {
+    width: 100%;
+    height: auto; }
+  .apps-content .apps-mobile .inner {
+    padding-top: 50px; }
+    .apps-content .apps-mobile .inner .buttons {
+      margin-bottom: 50px; }
+  .apps-content .buttons {
+    width: 100%;
+    margin-top: 40px; }
+    .apps-content .buttons li {
+      width: 100%;
+      margin: 0 0 10px 0; }
+      .apps-content .buttons li a {
+        justify-content: center; }
+  .apps-content .p-large {
+    max-width: 100%; }
+  .apps-content .apps-mac-windows-or-linux {
+    transform: none; }
+    .apps-content .apps-mac-windows-or-linux .inner {
+      padding: 0; }
+      .apps-content .apps-mac-windows-or-linux .inner .p-large {
+        max-width: 100%; }
+      .apps-content .apps-mac-windows-or-linux .inner .buttons {
+        margin-top: 20px; }
+    .apps-content .apps-mac-windows-or-linux .img-holder {
+      width: 100%;
+      margin: 0;
+      height: auto; }
+      .apps-content .apps-mac-windows-or-linux .img-holder img {
+        margin: 0;
+        width: 100%; }
   footer {
     padding: 0; }
     footer .get-started .inline .btn {
       padding-right: 30px;
       width: auto;
-      flex: 1; }
+      flex: 1;
+      margin-left: 15px; }
     footer .navigation h5 {
       margin: 0;
       padding: 0; }
