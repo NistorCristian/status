@@ -51,13 +51,70 @@ p{
     font-size: 20px;
 }
 
+svg{
+    path{
+        transition: all .3s ease;
+    }
+}
+
 a{
+    color: $purple;
     transition: all .3s ease;
+    &:hover{
+        color: $dark-purple;
+    }
 }
 
 a:hover,
 a:focus{
     text-decoration: none;
+}
+
+b{
+    font-weight: $ibm-plex-sans-bold;
+}
+
+blockquote{
+    line-height: 36px;
+    font-size: 24px;
+    color: rgba($dark-grey, 0.8);
+    font-family: $manrope;
+    font-weight: $manrope-medium;
+    position: relative;
+    margin-bottom: 30px;
+    &:before {
+        content: '';
+        width: 26px;
+        height: 25px;
+        background-image: url(../img/quotes.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: -5px;
+        left: -15px;
+    }
+    p{
+        line-height: 36px;
+        font-size: 24px;
+        color: rgba($dark-grey, 0.8);
+        font-family: $manrope;
+        font-weight: $manrope-medium;
+    }
+}
+
+pre {
+    overflow-x: auto;
+    margin: 30px 0;
+    padding: 20px;
+    max-width: 100%;
+    border: 1px solid $black;
+    color: $white;
+    background: $black;
+    border-radius: 5px;
+}
+
+hr{
+    margin: 50px 0;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -108,13 +165,19 @@ h4{
     &:active,
     &:focus{
         color: $black;
-        background: transparent;
+        background-color: transparent;
+        outline: 0;
+        box-shadow: none;
     }
 }
 
 .btn-fill{
     background: $black;
     color: $white;
+    &:focus svg path,
+    &:active svg path{
+        fill: $black;
+    }
 }
 
 .btn-purple{
@@ -124,6 +187,12 @@ h4{
         color: $white;
         background: $purple;
         border: 1px solid $purple;
+    }
+    &:active,
+    &:focus{
+        color: $purple;
+        border: 1px solid $purple;
+        background-color: transparent;
     }
 }
 
@@ -139,6 +208,7 @@ h4{
         background: $purple;
         color: $white;
         border: 1px solid $purple;
+        box-shadow: 0 0 0 2px rgba($purple,.25);
     }
 }
 
@@ -151,6 +221,12 @@ h4{
         border: 1px solid $white;
         background: $white;
     }
+    &:active,
+    &:focus{
+        color: $white;
+        border: 1px solid $white;
+        background: $black;
+    }
 }
 
 .btn-white-fill{
@@ -162,6 +238,13 @@ h4{
         border: 1px solid $dark-grey;
         color: $black;
     }
+    &:active,
+    &:focus{
+        background-color: $white;
+        border: 1px solid $dark-grey;
+        color: $black;
+        box-shadow: 0 0 0 2px rgba($white,.25);
+    }
 }
 
 .btn-arrow{
@@ -170,10 +253,35 @@ h4{
         &:hover:after{
             background-image: url('../img/icon-arrow-right-black.svg');
         }
+        &:active:hover:after,
+        &:focus:hover:after{
+            background-image: url('../img/icon-arrow-right-white.svg');
+        }
     }
     &.btn-white-fill{
         &:hover:after{
-            background-image: url('../img/icon-arrow-right.svg');
+            background-image: url('../img/icon-arrow-right-black.svg');
+        }
+        &:active:after,
+        &:focus:after{
+            background-image: url('../img/icon-arrow-right-black.svg');
+        }
+    }
+    &.btn-purple-fill{
+        &:active:hover:after,
+        &:focus:hover:after{
+            background-image: url('../img/icon-arrow-right-white.svg');
+        }
+    }
+    &.btn-fill{
+        &:after{
+            background-image: url('../img/icon-arrow-right-white.svg');
+        }
+        &:active:hover:after,
+        &:focus:hover:after,
+        &:focus:after,
+        &:active:after{
+            background-image: url('../img/icon-arrow-right-black.svg');
         }
     }
     &:after{
@@ -189,7 +297,11 @@ h4{
         transition: all .3s ease;
     }
     &:hover:after{
-        background-image: url('../img/icon-arrow-right-white.svg');
+        background-image: url('../img/icon-arrow-right-white-hover.svg');
+    }
+    &:active:hover:after,
+    &:focus:hover:after{
+        background-image: url('../img/icon-arrow-right.svg');
     }
 }
 
@@ -202,11 +314,9 @@ h4{
 .p-t-160{
     padding-top: 160px;
 }
-
 .p-b-160{
     padding-bottom: 160px;
 }
-
 .m-r-30{
     margin-right: 30px;
 }
@@ -216,14 +326,15 @@ h4{
 .m-b-100{
     margin-bottom: 100px;
 }
-
 .m-t-90{
     margin-top: 90px;
+}
+.m-t-50{
+    margin-top: 50px;
 }
 
 .link-arrow{
     font-size: 16px;
-    color: $purple;
     padding-right: 20px;
     font-family: $ibm-plex-mono;
     font-weight: $ibm-plex-mono-semi-bold;
@@ -312,7 +423,6 @@ h4{
             line-height: 19px;
             font-size: 15px;
             letter-spacing: -0.2px;
-            color: $purple; 
             display: flex;
             align-items: center;
             img, svg{
@@ -871,10 +981,12 @@ footer{
     h2{
         font-weight: $manrope-medium;
     }
-    h3{
-        margin-top: 60px;
-        &:first-child{
-            margin-top: 0;
+    .security-content{
+        h3{
+            margin-top: 60px;
+            &:first-child{
+                margin-top: 0;
+            }
         }
     }
     .col-lg-4{
@@ -905,21 +1017,6 @@ footer{
         blockquote{
             max-width: 480px;
             margin: 100px auto 0;
-            .teaser-1{
-                margin-bottom: 20px;
-                position: relative;
-                &:before{
-                    content: '';
-                    width: 26px;
-                    height: 25px;
-                    background-image: url('../img/quotes.svg');
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    position: absolute;
-                    top: -5px;
-                    left: -35px;
-                }
-            }
             span{
                 font-family: $manrope;
                 line-height: 22px;
@@ -1168,7 +1265,7 @@ footer{
             margin: 0 20px 10px 0;
             a{
                 display: flex;
-                img{
+                img, svg{
                     margin-right: 15px;
                 }
             }
@@ -1209,6 +1306,30 @@ footer{
                 margin-left: -151px;
             }
         }
+    }
+}
+
+.page-content{
+    p + h1,
+    p + h2,
+    p + h3,
+    p + h4{
+        margin-top: 100px;
+    }
+    p + .teaser-1,
+    p + .teaser-2{
+        margin-top: 100px;
+    }
+    p{
+        margin-bottom: 30px;
+    }
+    a{
+        text-decoration: underline;
+    }
+    ul,
+    ol{
+        padding-left: 20px;
+        margin-bottom: 30px;
     }
 }
 
@@ -1557,6 +1678,9 @@ footer{
     .m-t-90 {
         margin-top: 50px;
     }
+    .m-t-50 {
+        margin-top: 0;
+    }
     .btn{
         text-align: left;
         width: 100%;
@@ -1667,8 +1791,10 @@ footer{
                 display: none;
             }
         }
-        h3 {
-            margin-top: 50px;
+        .security-content{
+            h3 {
+                margin-top: 50px;
+            }
         }
         .col-lg-4{
             margin-bottom: 20px;
