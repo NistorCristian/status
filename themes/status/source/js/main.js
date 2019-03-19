@@ -43,4 +43,18 @@ $(document).ready(function ($) {
         $('body').toggleClass('nav-active');
     });
 
+    try {
+        highlight();
+    } catch(err) {
+        setTimeout(function() {
+            highlight();
+        }, 2500)
+    }
+
+    function highlight() {
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    }
+
 });

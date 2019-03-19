@@ -1,0 +1,11 @@
+docs:
+  build-status:
+    index: /
+    build-status-go: build-status-go
+    getting-setup: getting-setup
+    build-desktop: build-desktop
+    learn-about-our-tools: learn-about-our-tools
+    troubleshooting: troubleshooting
+    google-breakpad-integration: google-breakpad-integration
+    jenkins-setup: jenkins-setup
+  extensions: /
