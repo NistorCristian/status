@@ -1,11 +1,20 @@
 docs:
   build-status:
-    index: /
-    build-status-go: build-status-go
+    build-status: / (Build Status)
+    build-status-go: build-status-go (Build Status-Go)
     getting-setup: getting-setup
     build-desktop: build-desktop
-    learn-about-our-tools: learn-about-our-tools
     troubleshooting: troubleshooting
     google-breakpad-integration: google-breakpad-integration
     jenkins-setup: jenkins-setup
-  extensions: /
+  extensions:
+    extensions: / (Extensions)
+    key-concepts: key-concepts
+    workflow: workflow
+    syntax: syntax
+    extension-types: extension-types
+    reference-views: reference-views
+    reference-queries: reference-queries
+    reference-events: reference-events
+    examples: examples
+    play: play (Start Now!)

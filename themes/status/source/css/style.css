@@ -130,6 +130,22 @@ code {
   color: #ffffff;
   font-family: "IBM Plex Mono", monospace; }
 
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #090909; }
+  table tr {
+    transition: all .3s ease; }
+    table tr:hover {
+      background: rgba(234, 236, 239, 0.5); }
+  table td, table th {
+    padding: 15px;
+    vertical-align: top;
+    border-top: 1px solid #EAECEF; }
+  table th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #EAECEF; }
+
 hr {
   margin: 50px 0; }
 
@@ -1191,6 +1207,10 @@ footer {
     padding: 0; }
     .sidebar .sidebar-menu li {
       margin-bottom: 20px; }
+      .sidebar .sidebar-menu li.active a {
+        color: #4360DF; }
+      .sidebar .sidebar-menu li.active .sidebar-submenu {
+        display: block; }
       .sidebar .sidebar-menu li a {
         color: #000000;
         font-weight: 500; }
@@ -1199,12 +1219,17 @@ footer {
       .sidebar .sidebar-menu li .sidebar-submenu {
         list-style-type: none;
         margin-top: 20px;
-        padding-left: 20px; }
+        padding-left: 20px;
+        display: none; }
         .sidebar .sidebar-menu li .sidebar-submenu li {
           margin-bottom: 10px; }
+          .sidebar .sidebar-menu li .sidebar-submenu li.active a {
+            color: #4360DF;
+            font-weight: 500; }
           .sidebar .sidebar-menu li .sidebar-submenu li a {
             font-size: 15px;
-            font-weight: 400; }
+            font-weight: 400;
+            color: #000000; }
             .sidebar .sidebar-menu li .sidebar-submenu li a img {
               margin-left: 15px; }
 
@@ -1294,6 +1319,39 @@ footer {
 .page-content ol {
   padding-left: 20px;
   margin-bottom: 30px; }
+
+.single-docs-play #errors {
+  margin-top: 30px; }
+  .single-docs-play #errors ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+
+.single-docs-play #side-column canvas {
+  margin-left: -13px;
+  margin-top: 15px; }
+
+.single-docs-play #docs {
+  background: #EAECEF;
+  margin-top: 20px;
+  padding: 20px;
+  height: 300px;
+  overflow: auto; }
+  .single-docs-play #docs h6 {
+    font-weight: bold;
+    padding: 20px;
+    background: #4360DF;
+    color: #ffffff;
+    margin: 40px -20px 20px; }
+    .single-docs-play #docs h6:first-child {
+      margin-top: -20px; }
+  .single-docs-play #docs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .single-docs-play #docs ul li pre {
+      margin: 5px 0 30px 0;
+      white-space: pre-line; }
 
 @media (min-width: 1200px) {
   .container {

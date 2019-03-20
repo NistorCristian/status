@@ -78,3 +78,7 @@ deploy:
   type: git
   repo: git@github.com:NistorCristian/status.git
   branch: gh-pages
+
+#alias:
+#  api/index.html: api/classes/Hexo.html
+#  plugins/index.html: https://github.com/tommy351/hexo/wiki/Plugins
