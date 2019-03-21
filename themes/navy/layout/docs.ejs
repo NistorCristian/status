@@ -1,0 +1,108 @@
+<!-- The main content area -->
+<main id="main" role="main">
+
+	<div class="stripe">
+		<b>Status Documentation</b>
+		<form action="/" id="search-form" _lpchecked="1">
+			<!-- <input type="text" name="userSearch" id="userSearch" placeholder="Search...">
+    		<%- elasticsearch_script({target: "input#userSearch"}) %> -->
+		</form>
+	</div>
+
+	<section class="docs-content docs-content-intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="page-title">Welcome to the Status Documentation!</h1>
+					<p>Get familiar with or workflows and projects:</p>
+					<div class="categories">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="inner">
+									<a href="#">Developer Tools</a>
+									<span class="detail">JS API and Extensions</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="inner">
+									<a href="#">Build Status</a>
+									<span class="detail">For mobile and desktop</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="inner">
+									<a href="#">Extensions</a>
+									<span class="detail">Extend into the future</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="inner">
+									<a href="#">Research</a>
+									<span class="detail">Dive in! Learn more.</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="inner">
+									<a href="#">Security</a>
+									<span class="detail">Status best practices</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="inner">
+									<a href="#">Guides</a>
+									<span class="detail">How we handle things</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="inner">
+									<a href="#">Tutorials</a>
+									<span class="detail">Learn for yourself</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="inner">
+									<a href="#">Life at Status</a>
+									<span class="detail">Day-to-day decentralization</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="inner">
+									<a href="#">Technical Documentation</a>
+									<span class="detail">Growing our distributed ecosystem</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="docs-content single-docs-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<%- partial('partial/sidebar') %>
+				</div>
+				<div class="col-md-9">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="editor-content">
+								<%- page_anchor(page.content) %>
+							</div>
+							<div class="docs-footer">
+								Last update: <%- page.updated.format(config.date_format) %>
+								<%- page_nav() %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</main>
