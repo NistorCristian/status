@@ -29,63 +29,63 @@ hexo.extend.helper.register('join_status_chat', function() {
   return `<a href="${url}" class="button">Join Status Chat</a>`;
 });
 
-hexo.extend.helper.register('page_nav', function() {
-  var type = this.page.canonical_path.split('/')[0];
-  var sidebar = this.site.data.sidebar[type];
-  var path = pathFn.basename(this.path);
-  var list = {};
-  var prefix = 'sidebar.' + type + '.';
+hexo.extend.helper.register('sidebar', function(type) {
+    
+  var self = this,
+      path = this.page.path,
+      sidebar = this.site.data.sidebar[type],
+      result = '<ul class="sidebar-menu">';
 
-  for (var i in sidebar) {
-    for (var j in sidebar[i]) {
-      list[sidebar[i][j]] = j;
-    }
-  }
-
-  var keys = Object.keys(list);
-  var index = keys.indexOf(path);
-  var result = '';
-
-  if (index > 0) {
-    result += '<a href="' + keys[index - 1] + '" class="article-footer-prev" title="' + this.__(prefix + list[keys[index - 1]]) + '">'
-      + '<i class="fa fa-chevron-left"></i><span>' + this.__('page.prev') + '</span></a>';
-  }
-
-  if (index < keys.length - 1) {
-    result += '<a href="' + keys[index + 1] + '" class="article-footer-next" title="' + this.__(prefix + list[keys[index + 1]]) + '">'
-      + '<span>' + this.__('page.next') + '</span><i class="fa fa-chevron-right"></i></a>';
-  }
-
-  return result;
-});
-
-hexo.extend.helper.register('doc_sidebar', function(className) {
-  var self = this;
-  var canonicalPathToSplit = 0;
-
-  if (this.page.lang !== 'en') {
-    canonicalPathToSplit = 1;
-  }
-
-  var type = this.page.canonical_path.split('/')[canonicalPathToSplit];
-  var sidebar = this.site.data.sidebar[type];
-  var path = this.path;
-  var result = '';
-  var prefix = 'sidebar.' + type + '.';
-
-  _.each(sidebar, function(menu, title) {
-    result += '<strong class="' + className + '-title">' + self.__(prefix + title) + '</strong>';
-
-    _.each(menu, function(link, text) {
-      var itemClass = className + '-link';
-      if (link === pathFn.basename(path)) itemClass += ' current';
-
-      result += '<a href="' + link + '" class="' + itemClass + '">' + self.__(prefix + text) + '</a>';
-    });
+  _.each(sidebar, function(menu, category) {
+      var title = generateSidebarTitle(category);
+      if(typeof menu[category] === 'undefined'){
+        title = self.__(title);
+      }else{
+        title = generateSidebarTitle(menu[category]);
+      }
+      result += '<li class="'+ checkIfActive(path, category+'/') +'"><a href="/'+ category + '/">' + title + '</a>';
+      if(typeof menu == 'object'){
+          result += '<ul class="sidebar-submenu">';
+          _.each(menu, function(title, link) {
+              if(menu[category] != title){
+                  title = generateSidebarTitle(title);
+                  result += '<li class="'+ checkIfActive(path, category+'/'+link+'.html') +'"><a href="/'+ category +'/'+ link +'.html">' + title + '</a></li>';
+              }
+          });
+          result += '</ul>';
+      }
   });
 
+  result += '</ul>';
   return result;
 });
+
+function generateSidebarTitle(string){
+  var s = string.substring(
+      string.lastIndexOf("(") + 1, 
+      string.lastIndexOf(")")
+  );
+  if(s == ''){
+    s = string.replace(/_/g, " ");
+    s = s.replace(/.html/g, "");
+    s = toTitleCase(s);
+  }
+  return s;
+}
+
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function(txt){
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
+
+function checkIfActive(path, link){
+  if(path.indexOf(link)){
+      return '';
+  }else{
+      return 'active';
+  }
+}
 
 hexo.extend.helper.register('header_menu', function(className) {
   var menu = this.site.data.menu;
@@ -108,6 +108,10 @@ hexo.extend.helper.register('canonical_url', function(lang) {
   if (lang && lang !== 'en') path = lang + '/' + path;
 
   return this.config.url + '/' + path;
+});
+
+hexo.extend.helper.register('page_nav', function(lang) {
+  return;
 });
 
 hexo.extend.helper.register('url_for_lang', function(path) {

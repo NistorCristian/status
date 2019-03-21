@@ -1,74 +1,49 @@
 docs:
-  use_status:
-    index: index.html
+  docs:
+    technical_documentation: technical_documentation.html (Technical Documentation)
     contributor_guide: contributor_guide.html
     FAQs: FAQs.html
     faq-desktop: FAQ-desktop.html
-  app_structure:
     status_react_structure: status_react_structure.html
     send_transaction_flow: send_transaction_flow.html
-  status_node:
     run_status_node: run_status_node.html
-  keycard:
     keycard_api: ../keycard_api/
-  tutorial:
     tutorials: ../tutorials/
-  guide:
     guides: ../guides/
-  analytics:
     analytics_status: ../analytics/
-  mobile_release:
     mobile_release_schedule: ../mobile-release-schedule/
-
-developer_tools:
-  web3_for_everyone:
+  developer_tools:
     introduction_tools: index.html
-  connecting_to_web3: 
     access_an_ethereum_provider: access_eth_provider.html
     detecting_status: detecting_status.html
     debug: debug.html
-  optimised_for_status:
     assets_guidelines: assets_guidelines.html
     js_api: status_web_api.html
     http_debugging: http_debugging.html
-  submitting_to_status: 
     submit_to_status: add_your_dapp.html
     troubleshooting_dapps: troubleshooting_dapps.html
-  adapt_status:
     enable_chat: enable_chat.html
     add_your_own_network: add_your_own_network.html
-  status_extensions:
     intro_extensions: ../extensions/
-  status_fiddle:
     fiddle: /fiddle/
-  status_storybook: 
     storybook: https://status-im.github.io/storybook/
-
-build_status:
   build_status:
     introduction_build: index.html
     build_status_go: status_go.html
-  build_status_desktop:
     introduction_desktop: intro_desktop.html
     building_desktop: desktop.html
     desktop_inline_eval: ../tutorials/desktop_inline_eval.html
     troubleshooting: desktop_troubleshooting.html
     using_breakpad: desktop_google_breakpad.html
     jenkins_pipeline: desktop_jenkins.html
-
-tutorials:
-  whisper: 
+  tutorials:
     whisper_basic_cli: whisper_basic_cli.html
     whisper_embark: whisper_embark.html
-  extensions:
     extensions_chat_command: extensions_chat_command.html
-
-keycard_api:
-  getting_started:
+  keycard_api:
     overview: index.html
     applet_installation: applet_installation.html
     resources: resources.html
-  java_sdk:
     sdk_installation: sdk_installation.html
     sdk_connection: sdk_connection.html
     sdk_preparation: sdk_preparation.html
@@ -78,7 +53,6 @@ keycard_api:
     sdk_derivation_sign: sdk_derivation_sign.html
     sdk_export: sdk_export.html
     sdk_duplication: sdk_duplication.html
-  apdu:
     apdu_overview: apdu_overview.html
     apdu_changelog: apdu_changelog.html
     apdu_select: apdu_select.html
@@ -101,9 +75,7 @@ keycard_api:
     apdu_sign: apdu_sign.html
     apdu_setpinlesspath: apdu_setpinlesspath.html
     apdu_exportkey: apdu_exportkey.html
-
-research:
-  whisper: 
+  research:
     secret: index.html
     extended_features: extended_features.html
     dark_routing: dark_routing.html
@@ -111,55 +83,35 @@ research:
     whisper_faqs: whisper_faqs.html
     secure_messaging_compendium: secure_messaging_compendium.html
     research_blog: https://our.status.im/tag/research
-  research_projects:
     pfs: pfs.html
     ultra_light_clients: ulc_in_details.html
     nimbus: https://nimbus.status.im/
-  tutorials:
     basic_cli: ../tutorials/whisper_basic_cli.html
     whisper_embark: ../tutorials/whisper_embark.html
-
-security:
   security:
     introduction_security: index.html
-  security_status:
     threat_modeling: sec_threat_modeling.html
     existing_features: sec_existing_features.html
     new_features: sec_new_features.html
     security_week: sec_security_week.html
     sensitive_data: sec_sensitive_data.html
     experiment: sec_experiment.html
-  audits:
     introduction_audits: ../audits/
-  guides:
     introduction_guides: ../guides/
-  organization:
     introduction_organization: ../org_sec/
-
-audits:
   audits:
     introduction_audits: index.html
-
-guides:
   guides:
     introduction_guides: index.html
-  product:
     pm_guide: pm_guide.html
-  desktop:
     desktop_inline_eval: desktop_inline_eval.html
-  testing:
     introduction_testing: testing.html
     report_a_bug: report_a_bug.html
-  security:
     security_month: security_month.html
-
-org_sec:
-  org:
+  org_sec:
     introduction_organization: index.html
     security_champions: org_security_champions.html
     security_github_labels: org_github_labels.html 
-
-analytics:
   analytics:
     introduction: index.html
     app_downloads: app_downloads.html
@@ -168,37 +120,27 @@ analytics:
     crypto_oss: crypto_oss.html
     oss: oss.html
     run_it_yourself: run_it_yourself.html
-
-contribute:
-  get_involved:
+  contribute:
     introduction_contribute: index.html
-  jobs: 
     perks_benefits: perks_benefits.html
     apply_now: applying_to_status.html 
     open_positions: open_positions.html 
     applicant_privacy: applicant_privacy.html
-  working_status:
     statusphere: statusphere.html
     our_principles: our_principles.html
     life_status: life_status.html 
     the_future: the_future.html
     faqs: faqs.html
-
-extensions:
   extensions:
     introduction: index.html
     concepts: key_concepts.html
     workflow: workflow.html
-  build:  
     syntax: syntax.html
     extension_types: extension_types.html
-  tutorial:
     tutorial_chat_command: ../tutorials/extensions_chat_command.html
     tutorial_wallet_settings: ../tutorials/extensions_wallet_settings.html
-  references:
     reference_views: reference_views.html
     reference_queries: reference_queries.html
     reference_events: reference_events.html
-  create:
     examples: examples.html
     create_your_own: play.html
