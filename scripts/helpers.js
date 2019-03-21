@@ -205,3 +205,8 @@ hexo.extend.helper.register('global_header', function() {
   });
   return 'asd';
 });
+
+hexo.extend.helper.register('recetly_updated_repos', function() {
+  // https://api.github.com/users/status-im/repos?sort=updated&per_page=3
+  return '';
+});
