@@ -64,11 +64,7 @@ $(document).ready(function ($) {
     if (typeof Cookies.get('recently-updated') !== "undefined") {
       $('.recently-updated').append(Cookies.get('recently-updated'));
     }else{
-      fetch('https://api.github.com/users/status-im/repos?sort=updated&per_page=3',{
-        headers: new Headers({
-          'Authorization': 'token a9f21ba81a2f47e7af17b58bb9b61488372c4020'
-        })
-      })
+      fetch('https://api.github.com/users/status-im/repos?sort=updated&per_page=3')
       .then(
         function(response) {
           if (response.status !== 200) {
