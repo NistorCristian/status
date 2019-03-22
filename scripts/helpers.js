@@ -187,15 +187,14 @@ hexo.extend.helper.register('hexo_version', function() {
 
 function generateMenu(){
   return fetch('https://raw.githubusercontent.com/status-im/status-global-elements/master/dist/html/header.html')
-    .then(function(response) {
+  .then(function(response) {
       return response.text();
     })
-    .then(function(response) {
+  .then(function(response) {
       console.log('t2')
       return 'abc';
-    })
-    .catch(error => console.error(`Fetch Error =\n`, error));
-  console.log('t1');
+  })
+  .catch(error => console.error(`Fetch Error =\n`, error));
 }
 
 hexo.extend.helper.register('global_header', function() {
@@ -207,6 +206,41 @@ hexo.extend.helper.register('global_header', function() {
 });
 
 hexo.extend.helper.register('recetly_updated_repos', function() {
-  // https://api.github.com/users/status-im/repos?sort=updated&per_page=3
-  return '';
+
+  var html = '';
+  
+  // async function f() {
+  //   await fetch('https://api.github.com/users/status-im/repos?sort=updated&per_page=3',{
+  //     headers: new Headers({
+  //       'Authorization': 'token a9f21ba81a2f47e7af17b58bb9b61488372c4020'
+  //     })
+  //   })
+  //   .then(
+  //     function(response) {
+  //       if (response.status !== 200) {
+  //         console.log('Looks like there was a problem. Status Code: ' +
+  //           response.status);
+  //         return;
+  //       }
+
+  //       response.json().then(function(data) {
+
+  //         data.forEach(function(element) {
+  //           html += '<li><a href="'+ element.html_url +'">'+ element.full_name +'</a></li>';
+  //         });
+
+  //         console.log(html);
+  //         return html;
+
+  //       });
+
+  //     }
+  //   )
+  //   .catch(function(err) {
+  //     console.log('Fetch Error :-S', err);
+  //   });
+  // }
+
+  // f();
+
 });
