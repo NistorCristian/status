@@ -43,13 +43,26 @@ hexo.extend.helper.register('sidebar', function(type) {
       }else{
         title = generateSidebarTitle(menu[category]);
       }
-      result += '<li class="'+ checkIfActive(path, category+'/') +'"><a href="/'+ category + '/">' + title + '</a>';
+      if(category == 'security'){
+        result += '<li class="'+ checkIfActive(path, category+'/') +'"><a href="/'+ category + '/sec_matters.html">' + title + '</a>';
+      }else{
+        result += '<li class="'+ checkIfActive(path, category+'/') +'"><a href="/'+ category + '/">' + title + '</a>';
+      }
       if(typeof menu == 'object'){
           result += '<ul class="sidebar-submenu">';
           _.each(menu, function(title, link) {
               if(menu[category] != title){
-                  title = generateSidebarTitle(title);
-                  result += '<li class="'+ checkIfActive(path, category+'/'+link+'.html') +'"><a href="/'+ category +'/'+ link +'.html">' + title + '</a></li>';
+                var href = '';
+                href = '/'+ category +'/'+ link +'.html';
+                if(title.startsWith("..")){
+                  href = title.replace("..","");
+                  href = href.substring(0, href.indexOf(' '));
+                }else if(title.startsWith("http")){
+                  href = title;
+                  href = href.substring(0, href.indexOf(' '));
+                }
+                title = generateSidebarTitle(title);
+                result += '<li class="'+ checkIfActive(path, category+'/'+link+'.html') +'"><a href="'+ href +'">' + title + '</a></li>';
               }
           });
           result += '</ul>';
@@ -203,44 +216,4 @@ hexo.extend.helper.register('global_header', function() {
     return response;
   });
   return 'asd';
-});
-
-hexo.extend.helper.register('recetly_updated_repos', function() {
-
-  var html = '';
-  
-  // async function f() {
-  //   await fetch('https://api.github.com/users/status-im/repos?sort=updated&per_page=3',{
-  //     headers: new Headers({
-  //       'Authorization': 'token a9f21ba81a2f47e7af17b58bb9b61488372c4020'
-  //     })
-  //   })
-  //   .then(
-  //     function(response) {
-  //       if (response.status !== 200) {
-  //         console.log('Looks like there was a problem. Status Code: ' +
-  //           response.status);
-  //         return;
-  //       }
-
-  //       response.json().then(function(data) {
-
-  //         data.forEach(function(element) {
-  //           html += '<li><a href="'+ element.html_url +'">'+ element.full_name +'</a></li>';
-  //         });
-
-  //         console.log(html);
-  //         return html;
-
-  //       });
-
-  //     }
-  //   )
-  //   .catch(function(err) {
-  //     console.log('Fetch Error :-S', err);
-  //   });
-  // }
-
-  // f();
-
 });

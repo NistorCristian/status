@@ -4,7 +4,7 @@ partial: first_page
 title: Technical Documentation
 ---
 
-## Technical Documentation
+# Technical Documentation
 
 Welcome to our documentation pages! We know it's the most important thing for growing our distributed ecosystem...
 

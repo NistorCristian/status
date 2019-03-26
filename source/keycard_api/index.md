@@ -3,7 +3,9 @@ id: index
 title: Keycard - Getting Started
 ---
 
-# Overview
+# Keycard - Getting Started
+
+## Overview
 
 Keycard provides to developer an hardware implementation of a [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) HD wallet. This means it supports key generation, derivation and signing. It also allows exporting keys defined in the context of [EIP-1581](https://eips.ethereum.org/EIPS/eip-1581).
 

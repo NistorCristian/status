@@ -1635,6 +1635,9 @@ footer{
             color: #090909;
             margin-bottom: 30px;
         }
+        h1:first-of-type{
+            margin-top: 0;
+        }
         ul, ol{
             margin-bottom: 30px;
             padding-left: 20px;

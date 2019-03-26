@@ -1,5 +1,4 @@
 ---
-layout: build
 id: index
 title: Build Status Yourself
 ---
