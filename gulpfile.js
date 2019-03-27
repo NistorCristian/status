@@ -45,8 +45,7 @@ var config = {
         src: {
             scss: './themes/navy/source/scss/*.scss',
             js: [
-                './themes/navy/source/js/shared-js/js/utils.js',
-                './themes/navy/source/js/shared-js/js/popups.js',
+                './themes/navy/source/js/dev.js',
             ],
         },
         dist: {

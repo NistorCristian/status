@@ -3,11 +3,13 @@ id: examples
 title: Extensions Examples
 ---
 
+# Extensions Examples
+
 To help bootstrap your extensions experimentations here is a list of extensions exploring the various options available.
 
 _WARNING_ Most of those extensions are not working and are presented for educational purposes only.
 
-# Chat commands
+## Chat commands
 
 Hello world: ([Modify](https://status.im/extensions/play.html?hash=QmV8JsEA2fBnjstH3MJzK5SgF9F7qNSyKLo2LapYia5pX4), [Install](https://get.status.im/extension/ipfs@QmV8JsEA2fBnjstH3MJzK5SgF9F7qNSyKLo2LapYia5pX4))
 
@@ -25,7 +27,7 @@ Weasel (one of EthSingapore winner) ([Modify](https://status.im/extensions/play.
 
 Aragon integration (one of EthSingapore winner) ([Modify](https://status.im/extensions/play.html?hash=QmeEGtHHBn8p11gjCWPh1EzNaojNtDzLqWCdN2XE3auJDV), [Install](https://get.status.im/extension/ipfs@QmeEGtHHBn8p11gjCWPh1EzNaojNtDzLqWCdN2XE3auJDV))
 
-# Wallet settings
+## Wallet settings
 
 Hello world: ([Modify](https://status.im/extensions/play.html?hash=QmYnUj7v3UiP6X1YfRuhea5mXpjTGG1KKnCwFS4TKzKTpD), [Install](https://get.status.im/extension/ipfs@QmYnUj7v3UiP6X1YfRuhea5mXpjTGG1KKnCwFS4TKzKTpD))
 
