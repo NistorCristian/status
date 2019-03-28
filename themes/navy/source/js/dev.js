@@ -116,4 +116,31 @@ $(document).ready(function ($) {
   
   }
 
+  $(".sidebar").stick_in_parent({
+    offset_top: 30
+  });
+
+  if($('input[name="userSearch"]').length){
+    window.addEventListener('click', function(e){   
+      if (document.getElementById('search-form').contains(e.target)){
+          $('#search-form').removeClass('inactive');
+      } else{
+          $('#search-form').addClass('inactive');
+      }
+    });
+    $('input[name="userSearch"]').on('keyup', function () {
+      var val = $(this).val();
+      $('#search-results').empty();
+      $.ajax({
+        url: "https://search.status.im/status.im/_search?size=10&_source=title,url&&q=" + val,
+      })
+      .done(function(results) {
+        $.each(results.hits.hits, function (index, value) { 
+          $('<a href="'+ value._source.url +'">'+ value._source.title +'</a>').appendTo('#search-results');
+        });
+      });
+    });
+  }
+
+
 });

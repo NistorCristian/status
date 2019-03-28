@@ -1,6 +1,6 @@
 docs:
   docs:
-    technical_documentation: technical_documentation.html (Technical Documentation)
+    docs: / (Technical Documentation)
     contributor_guide: contributor_guide.html
     FAQs: FAQs.html
     FAQ-desktop: FAQ-desktop.html (Desktop FAQ)

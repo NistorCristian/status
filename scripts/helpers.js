@@ -45,6 +45,12 @@ hexo.extend.helper.register('sidebar', function(type) {
       }
       if(category == 'security'){
         result += '<li class="'+ checkIfActive(path, category+'/') +'"><a href="/'+ category + '/sec_matters.html">' + title + '</a>';
+      }else if(category == 'docs'){
+        if(path == 'docs/index.html'){
+          result += '<li><a href="/docs/technical_documentation.html">' + title + '</a>';
+        }else{
+          result += '<li class="'+ checkIfActive(path, category+'/') +'"><a href="/docs/technical_documentation.html">' + title + '</a>';
+        }
       }else{
         result += '<li class="'+ checkIfActive(path, category+'/') +'"><a href="/'+ category + '/">' + title + '</a>';
       }
