@@ -1,9 +1,11 @@
 <%- partial('partial/head') %>
-<body>
+<body class="template-<%- page.layout %>">
+
     <div class="main-container">
         <%- partial('partial/header') %>
         <%- body %>
         <%- partial('partial/footer') %>
+        
     </div>
 
     <!-- 3rd party scripts -->

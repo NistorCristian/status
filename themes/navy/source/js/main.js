@@ -132,6 +132,23 @@ $(document).ready(function ($) {
       });
     });
   }
+
+  $('.features-intro ul li a').on('click', function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(id).offset().top
+    }, 300);
+  });
+
+  if ($('.home-intro .announcement').length) {
+    $.ajax({
+      url: "https://our-status.hauntedthemes.com/ghost/api/v2/content/posts/?key=c6717eab3d9a3e6be361980f66&limit=1&fields=title,url"
+    }).done(function (results) {
+      $('.home-intro .announcement b').text(results.posts[0].title);
+      $('.home-intro .announcement').attr('href', results.posts[0].url).removeClass('inactive');
+    });
+  }
 });
 
 },{}]},{},[1])
