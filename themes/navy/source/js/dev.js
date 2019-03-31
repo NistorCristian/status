@@ -160,4 +160,9 @@ $(document).ready(function ($) {
     });
   }
 
+  $('.sidebar-mobile-trigger, .mobile-sidebar-trigger-close').on('click', function (event) {
+    event.preventDefault();
+    $('body').toggleClass('sidebar-active');
+  });
+
 });
