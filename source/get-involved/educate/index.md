@@ -1,0 +1,4 @@
+---
+title: Educate
+layout: educate
+---
