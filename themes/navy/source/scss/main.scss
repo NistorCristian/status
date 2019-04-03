@@ -2700,3 +2700,191 @@ footer{
         margin-bottom: 40px;
     }
 }
+
+
+
+/*======= GET-INVOLVED-DEVELOPMENT ======*/
+
+.development-open-source{
+    margin: 130px 0 210px 0;
+    .statement{
+        font-size: 28px;
+        line-height: 39px;
+        font-family: $manrope;
+        font-weight: $manrope-regular;
+        color: rgba( $dark-grey, .8 );
+    }
+    h1{
+        margin-bottom: 60px;
+    }
+    .teaser-1{
+        margin-bottom: 0;
+    }
+}
+
+.quick-nav{
+    background-color: $light-black;
+    ul{
+        padding: 0;
+        display: flex;
+        margin-bottom: 0;
+        li{
+            padding: 20px 0;
+            margin-bottom: 0;
+            list-style-type: none;
+            margin-right: 60px;
+            a{
+                color: $white;
+                font-size: 18px;
+                font-family: $manrope;
+                font-weight: $manrope-medium;
+                line-height: 38px;
+                img{
+                    margin-right: 20px;
+                }
+            }
+            a.active{
+                /*background-color: #6B6B6B;*/
+            }
+        }
+        li:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+.quick-nav-sub{
+    background-color: #6B6B6B;
+    .col-md-12{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul{
+            li{
+                padding: 10px 0;
+                a{
+                    font-size: 14px;
+                    color: rgba( $white, .7 );
+                }
+            }
+        }
+        a{
+            font-size: 14px;
+            color: rgba( $white, .7 ); 
+            img{
+                margin-right: 10px;
+            } 
+        }
+    }
+}
+
+.development-contribute-to-status{
+    background-color: $lighter-grey;
+    h2{
+        margin-bottom: 50px;
+    }
+    p{
+        margin-bottom: 115px;
+    }
+    .quick-start-guide{
+        font-size: 20px;
+        font-family: $manrope;
+        font-weight: $manrope-medium;
+        line-height: 32px;
+    }
+}
+
+.box-with-icon{
+    display: flex;
+    align-items: baseline;
+    padding-right: 60px;
+    img{
+        margin-right: 35px;
+    }
+    h3{
+        margin-bottom: 30px;
+    }
+    p{
+        color: rgba( $black, .8 ); 
+        font-size: 18px;
+        line-height: 31px;
+        margin-bottom: 30px;
+    }
+}
+
+.development-dapp{
+    ul{
+        padding: 0;
+        li{
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+    }
+    .development-build-dapp{
+        padding: 120px 0;
+        h2{
+            font-weight: $manrope-medium;
+        }
+    }
+}
+
+.development-extend-dapp{
+    h2{
+        font-weight: $manrope-medium;
+    }
+    .teaser-2{
+        margin-bottom: 50px;
+    }
+}
+
+.development-resources{
+    padding: 220px 0 160px 0;
+    .inner{
+        h2{
+            font-weight: $manrope-medium; 
+            margin-bottom: 70px;
+        }
+        ul{
+            padding: 0;
+            li{
+                list-style-type: none;
+                margin-bottom: 40px;
+                a{
+                    font-size: 16px;
+                }
+                p{
+                    color: rgba( $white, .8 ); 
+                    margin-bottom: 0;
+                }
+            }
+            li:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .developer-resources{
+        ul{
+            li{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.development-get-in-touch{
+    .inner{
+        padding-right: 50px;
+        a{
+            font-family: $ibm-plex-mono;
+            font-weight: $ibm-plex-mono-semi-bold;
+            font-size: 16px;
+            line-height: 20px;
+            img{
+                margin-right: 10px;
+            }
+        }
+        p{
+            margin-top: 15px;
+        }
+    }
+}
