@@ -62,7 +62,7 @@ $(document).ready(function ($) {
 
     var html = '';
 
-    if (typeof Cookies.get('recently-updated') !== "undefined") {
+    if (typeof Cookies.get('recently-updated') !== 'undefined') {
       $('.recently-updated').append(Cookies.get('recently-updated'));
     } else {
       fetch('https://api.github.com/users/status-im/repos?sort=updated&per_page=3').then(function (response) {
@@ -108,7 +108,7 @@ $(document).ready(function ($) {
     retrieveAdvocacyPrograms();
   }
 
-  $(".sidebar").stick_in_parent({
+  $('.sidebar').stick_in_parent({
     offset_top: 30
   });
 
@@ -124,7 +124,7 @@ $(document).ready(function ($) {
       var val = $(this).val();
       $('#search-results').empty();
       $.ajax({
-        url: "https://search.status.im/status.im/_search?size=10&_source=title,url&&q=" + val
+        url: 'https://search.status.im/status.im/_search?size=10&_source=title,url&&q=' + val
       }).done(function (results) {
         $.each(results.hits.hits, function (index, value) {
           $('<a href="' + value._source.url + '">' + value._source.title + '</a>').appendTo('#search-results');
@@ -143,7 +143,7 @@ $(document).ready(function ($) {
 
   if ($('.home-intro .announcement').length) {
     $.ajax({
-      url: "https://our-status.hauntedthemes.com/ghost/api/v2/content/posts/?key=c6717eab3d9a3e6be361980f66&limit=1&fields=title,url"
+      url: 'https://our-status.hauntedthemes.com/ghost/api/v2/content/posts/?key=c6717eab3d9a3e6be361980f66&limit=1&fields=title,url'
     }).done(function (results) {
       $('.home-intro .announcement b').text(results.posts[0].title);
       $('.home-intro .announcement').attr('href', results.posts[0].url).removeClass('inactive');
@@ -154,6 +154,27 @@ $(document).ready(function ($) {
     event.preventDefault();
     $('body').toggleClass('sidebar-active');
   });
+
+  if ($('.quick-nav').length) {
+    var quickNavOffset = $('.quick-nav').offset().top;
+    $(window).scroll(function (event) {
+      var y = $(window).scrollTop();
+      if (y > quickNavOffset) {
+        $('.quick-nav, .quick-nav-sub').addClass('fixed');
+      } else {
+        $('.quick-nav, .quick-nav-sub').removeClass('fixed');
+      }
+    });
+    $('.quick-nav-sub ul li a').on('click', function (event) {
+      event.preventDefault();
+      var id = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(id).offset().top - 100
+      }, 300);
+    });
+  }
+
+  // https://api.github.com/repos/status-im/status-react/issues?sort=created&per_page=20
 });
 
 },{}]},{},[1])

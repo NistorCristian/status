@@ -2,11 +2,11 @@
 <main id="main" role="main">
 
 	<!-- DEVELOPMENT-OPEN-SOURCE -->
-	<section class="development-open-source">
+	<section class="get-involved-intro p-t-160 p-b-160">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<p class="statement">An Open Source Community</p>
+					<h4>An Open Source Community</h4>
 					<h1>Development</h1>
 					<p class="teaser-1">Welcome to the Status Developer Portal. Find everything you need to start contributing to Status, building your own DApps, or extending your work with the natives features of Status.</p>
 				</div>
@@ -15,42 +15,44 @@
 	</section>
 	<!-- END-DEVELOPMENT-OPEN-SOURCE -->
 
-	<!-- DEVELOPMENT-QUICK-NAV -->
-	<section class="quick-nav">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<ul>
-						<li><a href="#" class="active"><%- image_tag("/img/development-small-icon.svg") %>Development</a></li>
-						<li><a href="#"><%- image_tag("/img/educate-small-icon.svg") %>Educate</a></li>
-						<li><a href="#"><%- image_tag("/img/community-groups-small-icon.svg") %>Community Groups</a></li>
-					</ul>
+	<div class="position-relative">
+		<!-- DEVELOPMENT-QUICK-NAV -->
+		<section class="quick-nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul>
+							<li><a href="/get-involved/development/" class="active"><%- image_tag("/img/development-small-icon.svg") %>Development</a></li>
+							<li><a href="/get-involved/educate/"><%- image_tag("/img/educate-small-icon.svg") %>Educate</a></li>
+							<li><a href="/get-involved/community/"><%- image_tag("/img/community-groups-small-icon.svg") %>Community Groups</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!-- END-DEVELOPMENT-QUICK-NAV -->
+		</section>
+		<!-- END-DEVELOPMENT-QUICK-NAV -->
 
-	<!-- DEVELOPMENT-QUICK-NAV-SUB -->
-	<section class="quick-nav quick-nav-sub">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<ul>
-						<li><a href="#">Contribute to Status</a></li>
-						<li><a href="#">Build  DApps</a></li>
-						<li><a href="#">Extend  DApps</a></li>
-						<li><a href="#">Developer Resources</a></li>
-					</ul>
-					<a href="#"><%- image_tag("/img/github-white-logo.svg") %>Github</a>
+		<!-- DEVELOPMENT-QUICK-NAV-SUB -->
+		<section class="quick-nav-sub">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul>
+							<li><a href="#contribute-to-status">Contribute to Status</a></li>
+							<li><a href="#build-dapps">Build DApps</a></li>
+							<li><a href="#extend-dapps">Extend DApps</a></li>
+							<li><a href="#developer-resources">Developer Resources</a></li>
+						</ul>
+						<a href="https://github.com/status-im" target="_blank"><%- image_tag("/img/github-white-logo.svg") %>Github</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!-- END-DEVELOPMENT-QUICK-NAV-SUB -->
+		</section>
+		<!-- END-DEVELOPMENT-QUICK-NAV-SUB -->
+	</div>
 
 	<!-- DEVELOPMENT-CONTRIBUTE-TO-STATUS -->
-	<section class="development-contribute-to-status p-t-160 p-b-160">
+	<section class="development-contribute-to-status p-t-160 p-b-160" id="contribute-to-status">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -62,28 +64,100 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<div class="box-with-icon">
+					<div class="box-with-icon m-t-50">
 						<%- image_tag("/img/github-black-logo.svg") %>
 						<div class="inner">
 							<h3>Status-React</h3>
 							<p>Written in Clojure - this is where we handle interactions between Whisper and the app; between the wallet, the user and any Distributed Application (DApp) that they want to access; and where the UI logic lives.</p>
-							<a href="#" class="link-arrow">View Repository</a>
+							<a href="https://github.com/status-im/status-react" target="_blank" class="link-arrow">View Repository</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div class="box-with-icon">
+					<div class="box-with-icon m-t-50">
 						<%- image_tag("/img/github-black-logo.svg") %>
 						<div class="inner">
 							<h3>Status-Go</h3>
 							<p>Written in Go - this is where all of the blockchain logic, transactions, and light client work we do lives. </p>
-							<a href="#" class="link-arrow">View Repository</a>
+							<a href="https://github.com/status-im/status-go" target="_blank" class="link-arrow">View Repository</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
+		<div class="container m-t-90 open-issues">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Open Issues</h3>
+					<ul>
+						<li>
+							<div class="number">#7513</div>
+							<div class="details">
+								<b>Not all the message types are confirmed</b>
+								<div class="tags">
+									<a href="https://github.com/status-im/status-react/issues?q=is%3Aissue+is%3Aopen+label%3Afirst-good-issue">first good issue</a>
+									<a href="https://github.com/status-im/status-react/issues?q=is%3Aissue+is%3Aopen+label%3Aandroid">android</a>
+								</div>
+							</div>
+							<div class="opened">
+								Opened: <time>2 days ago</time>
+							</div>
+							<div class="activity">
+								Last activity: <time>6 hours ago</time>
+							</div>
+						</li>
+						<li>
+							<div class="number">#7513</div>
+							<div class="details">
+								<b>geth.log is empty even LogLevel=Trace and permission storage for Status enabled</b>
+								<div class="tags">
+									<a href="https://github.com/status-im/status-react/issues?q=is%3Aissue+is%3Aopen+label%3Afirst-good-issue">first good issue</a>
+									<a href="https://github.com/status-im/status-react/issues?q=is%3Aissue+is%3Aopen+label%3Aandroid">android</a>
+								</div>
+							</div>
+							<div class="opened">
+								Opened: <time>2 days ago</time>
+							</div>
+							<div class="activity">
+								Last activity: <time>6 hours ago</time>
+							</div>
+						</li>
+						<li>
+							<div class="number">#7513</div>
+							<div class="details">
+								<b>No "Add to contact" is shown in 1-1 chat header after restoring account with chat</b>
+								<div class="tags">
+									<a href="https://github.com/status-im/status-react/issues?q=is%3Aissue+is%3Aopen+label%3Afirst-good-issue">first good issue</a>
+									<a href="https://github.com/status-im/status-react/issues?q=is%3Aissue+is%3Aopen+label%3Aandroid">android</a>
+								</div>
+							</div>
+							<div class="opened">
+								Opened: <time>2 days ago</time>
+							</div>
+							<div class="activity">
+								Last activity: <time>6 hours ago</time>
+							</div>
+						</li>
+						<li>
+							<div class="number">#7513</div>
+							<div class="details">
+								<b>Not all the message types are confirmed</b>
+								<div class="tags">
+									<a href="https://github.com/status-im/status-react/issues?q=is%3Aissue+is%3Aopen+label%3Afirst-good-issue">first good issue</a>
+									<a href="https://github.com/status-im/status-react/issues?q=is%3Aissue+is%3Aopen+label%3Aandroid">android</a>
+								</div>
+							</div>
+							<div class="opened">
+								Opened: <time>2 days ago</time>
+							</div>
+							<div class="activity">
+								Last activity: <time>6 hours ago</time>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -110,7 +184,7 @@
 	<!-- END-DEVELOPMENT-CONTRIBUTE-TO-STATUS -->
 
 	<!-- DEVELOPMENT-DAPP -->
-	<section class="development-dapp">
+	<section class="development-dapp" id="build-dapps">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 development-build-dapp">
@@ -150,7 +224,7 @@
 	<!-- DEVELOPMENT-DAPP -->
 
 	<!-- DEVELOPMENT-RESOURCES -->
-	<section class="development-resources col-dark-grey col-black">
+	<section class="development-resources col-dark-grey col-black" id="extend-dapps">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 contribute-support">
@@ -198,7 +272,7 @@
 	<!-- DEVELOPMENT-RESOURCES -->
 
 	<!-- DEVELOPMENT-GET-IN-TOUCH -->
-	<section class="development-get-in-touch p-t-160 p-b-160">
+	<section class="development-get-in-touch p-t-160 p-b-160" id="developer-resources">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">

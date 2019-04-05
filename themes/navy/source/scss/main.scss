@@ -1883,6 +1883,468 @@ footer{
     }
 }
 
+
+
+/*======= GET-INVOLVED ======*/
+
+.get-involved-intro{
+    position: relative;
+    &:before{
+        content: '';
+        width: 508px;
+        height: 662px;
+        position: absolute;
+        top: -105px;
+        right: 0;
+        background-image: url('../img/open-source-illustration.svg');
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: cover;
+    }
+    .open-source-illustration-horz{
+        display: none;
+        img{
+            width: 100%;
+            margin: 30px 0 0 -20px;
+        }
+    }
+    h4{
+        margin-bottom: 10px;
+        color: rgba( $dark-grey, .8 );
+    }
+}
+
+.get-involved-box-links{
+    .box-link{
+        background-color: $light-black;
+        padding: 30px 40px;
+        color: $white;
+        position: relative;
+        transition: all .3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        &:hover{
+            background-color: $purple;
+        }
+        .title{
+            font-size: 24px;
+            line-height: 38px;
+            margin-bottom: 50px;
+            display: flex;
+            min-height: 40px;
+            align-items: center;
+            a{
+                color: $white;
+                &:before{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                }
+            }
+            img{
+                margin-right: 25px;
+            }
+        }
+        p{
+            color: rgba( $white, .8 );
+            &:last-of-type{
+                margin-bottom: 40px;
+            }
+        }
+        .link-arrow{
+            margin-top: auto;
+        }
+    }
+}
+
+.top-contributors{
+    .contributors{
+        margin-top: 70px;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+/*======= GET-INVOLVED-DEVELOPMENT ======*/
+
+.quick-nav{
+    background-color: $light-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 12;
+    &.fixed{
+        position: fixed;
+    }
+    ul{
+        padding: 0;
+        display: flex;
+        margin-bottom: 0;
+        li{
+            margin-bottom: 0;
+            list-style-type: none;
+            margin-right: 20px;
+            a{
+                padding: 11px 20px;
+                color: $white;
+                font-size: 18px;
+                font-family: $manrope;
+                font-weight: $manrope-medium;
+                line-height: 38px;
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 20px;
+                }
+                &:hover{
+                    background-color: rgba( $light-grey, .5 );
+                }
+            }
+            a.active{
+                background-color: $light-grey;
+            }
+        }
+        li:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+.quick-nav-sub{
+    background-color: $light-grey;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 12;
+    &.fixed{
+        position: fixed;
+    }
+    .col-md-12{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul{
+            padding: 0;
+            display: flex;
+            margin-bottom: 0;
+            li{
+                margin-bottom: 0;
+                list-style-type: none;
+                margin-right: 20px;
+                a{
+                    font-size: 14px;
+                    display: flex;
+                    padding: 7px 20px;
+                    color: rgba( $white, .7 );
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        a{
+            font-size: 14px;
+            color: rgba( $white, .7 ); 
+            img{
+                margin-right: 10px;
+            } 
+        }
+    }
+}
+
+.development-contribute-to-status{
+    background-color: $lighter-grey;
+    margin-top: 100px;
+    .quick-start-guide{
+        font-size: 20px;
+        font-family: $manrope;
+        font-weight: $manrope-medium;
+        line-height: 32px;
+    }
+}
+
+.box-with-icon{
+    display: flex;
+    align-items: baseline;
+    padding-right: 60px;
+    img{
+        margin-right: 35px;
+    }
+    h3{
+        margin-bottom: 30px;
+    }
+    p{
+        color: rgba( $black, .8 ); 
+        font-size: 18px;
+        line-height: 31px;
+        margin-bottom: 30px;
+    }
+}
+
+.open-issues{
+    ul{
+        list-style-type: none;
+        margin: 90px 0 0;
+        padding: 0;
+        li{
+            display: flex;
+            padding-bottom: 25px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba( $light-grey, .2 );
+            .number{
+                font-size: 16px;
+                line-height: 20px;
+                color: rgba($light-grey, 0.8);
+                font-family: $ibm-plex-mono;
+                width: 50px;
+                margin-right: 20px;
+            }
+            .details{
+                flex: 1;
+                b{
+                    display: block;
+                    font-size: 16px;
+                    line-height: 22px;
+                    font-family: $manrope;
+                    font-weight: $manrope-medium;
+                    color: $black;
+                    margin-bottom: 13px;
+                }
+                .tags{
+                    display: flex;
+                    a{
+                        font-family: $ibm-plex-mono;
+                        font-weight: $ibm-plex-mono-medium;
+                        color: $white;
+                        font-size: 13px;
+                        line-height: 17px;
+                        padding: 5px 7px;
+                        background: $darker-grey;
+                        border-radius: 2px;
+                        margin-right: 8px;
+                        &:hover{
+                            background-color: $purple;
+                        }
+                    }
+                }
+            }
+            .opened,
+            .activity{
+                display: flex;
+                align-items: flex-end;
+                font-size: 13px;
+                line-height: 19px;
+                color: rgba( $light-grey, .7 );
+                margin-left: 50px;
+                font-family: $manrope;
+                font-weight: $manrope-medium;
+                time{
+                    color: $dark-grey;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.development-dapp{
+    ul{
+        padding: 0;
+        li{
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+    }
+    .development-build-dapp{
+        padding: 120px 0;
+        h2{
+            font-weight: $manrope-medium;
+        }
+    }
+}
+
+.development-extend-dapp{
+    h2{
+        font-weight: $manrope-medium;
+    }
+    .teaser-2{
+        margin-bottom: 50px;
+    }
+}
+
+.development-resources{
+    padding: 220px 0 160px 0;
+    .inner{
+        h2{
+            font-weight: $manrope-medium; 
+            margin-bottom: 70px;
+        }
+        ul{
+            padding: 0;
+            li{
+                list-style-type: none;
+                margin-bottom: 40px;
+                a{
+                    font-size: 16px;
+                }
+                p{
+                    color: rgba( $white, .8 ); 
+                    margin-bottom: 0;
+                }
+            }
+            li:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .developer-resources{
+        ul{
+            li{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.development-get-in-touch{
+    .inner{
+        padding-right: 50px;
+        a{
+            font-family: $ibm-plex-mono;
+            font-weight: $ibm-plex-mono-semi-bold;
+            font-size: 16px;
+            line-height: 20px;
+            img{
+                margin-right: 10px;
+            }
+        }
+        p{
+            margin-top: 15px;
+        }
+    }
+}
+
+
+/*====== EDUCATE-PAGE ======*/
+
+.educate-contribute{
+    background-color: $lighter-grey;
+    .inner{
+        h2{
+            font-weight: $manrope-medium;
+            margin-bottom: 90px;
+        }
+        ul{
+            padding: 0;
+            li{
+                list-style-type: none;
+                margin-bottom: 45px;
+                p{
+                    color: rgba( $black, .8 );
+                    margin: 15px 0 0 0;
+                    a{
+                        color: rgba( $purple, .8 );
+                    }
+                }
+            }
+            li:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.educate-translate{
+    padding: 140px;
+    h2{
+        font-weight: $manrope-medium;
+    }
+    ul{
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+       li{
+            list-style-type: none;
+            margin-bottom: 20px;
+            width: 50%;
+        } 
+    }
+}
+
+.educator-resources{
+    h2{
+        margin-bottom: 70px;
+    }
+    .inner{
+        ul{
+            padding: 0;
+            li{
+                list-style-type: none;
+                margin-bottom: 40px;
+            }
+            li:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .educate-join{
+        ul{
+            li:nth-child(n+3){
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+/*===== COMMUNITY-GROUPS-PAGE =====*/
+
+
+.account-creation{
+    background-color: #F4F5F7;
+    padding: 30px 40px;
+    text-align: center;
+    flex: 1;
+    img{
+        margin-bottom: 25px;
+    }
+    a{
+        font-family: $ibm-plex-mono;
+        font-weight: $ibm-plex-mono-semi-bold;
+        font-size: 16px;
+        line-height: 20px;
+        display: block;
+    }
+    p{
+        font-family: $manrope;
+        font-weight: $manrope-medium;
+        font-size: 14px;
+        line-height: 21px;
+        color: #666D76;
+        margin: 20px 0 30px 0;
+    }
+    .occupation{
+        font-family: $manrope;
+        font-weight: $manrope-regular;
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba($dark-grey, .8);
+        padding-right: 20px;
+    }
+    .name{
+        font-weight: $manrope-semi-bold;
+        color: $black;
+    }
+}
+
 @media (max-width: 1499px){
     .container {
         max-width: 1170px;
@@ -2087,6 +2549,19 @@ footer{
             padding: 50px 0;
         }
     }
+    .get-involved-intro{
+        &:before{
+            width: 360px;
+            height: 470px;
+        }
+    }
+    .get-involved-box-links{
+        .box-link{
+            .title{
+                font-size: 20px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1300px) {
@@ -2164,6 +2639,12 @@ footer{
     }
     .stripe{
         padding: 0 20px;
+    }
+    .get-involved-box-links{
+        margin: 0 -20px;
+        .col-xl-4{
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -2647,357 +3128,12 @@ footer{
             }
         }
     }
-}
-
-
-
-/*======= GET-INVOLVED ======*/
-
-.get-involved-open-source{
-    margin: 130px 0 210px 0;
-    h1{
-        margin-bottom: 60px;
-    }
-    p{
-        margin-bottom: 0;
-    }
-}
-
-.get-involved-box-links{
-    .box-link{
-        background-color: $light-black;
-        padding: 30px 40px;
-        color: $white;
-        position: relative;
-        .title{
-            color: $white;
-            font-size: 24px;
-            line-height: 38px;
-            margin-bottom: 50px;
-            img{
-                margin-right: 25px;
-            }
+    .get-involved-intro{
+        &:before{
+            display: none;
         }
-        p:last-of-type{
-            margin-bottom: 40px;
+        .open-source-illustration-horz{
+            display: block;
         }
-        a:before{
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    }
-}
-
-.top-contributors{
-    h3{
-        margin-bottom: 110px;
-    }
-    .contributors{
-        margin-bottom: 40px;
-    }
-}
-
-
-
-/*======= GET-INVOLVED-DEVELOPMENT ======*/
-
-.development-open-source{
-    margin: 130px 0 210px 0;
-    .statement{
-        font-size: 28px;
-        line-height: 39px;
-        font-family: $manrope;
-        font-weight: $manrope-regular;
-        color: rgba( $dark-grey, .8 );
-    }
-    h1{
-        margin-bottom: 60px;
-    }
-    .teaser-1{
-        margin-bottom: 0;
-    }
-}
-
-.quick-nav{
-    background-color: $light-black;
-    ul{
-        padding: 0;
-        display: flex;
-        margin-bottom: 0;
-        li{
-            padding: 20px 0;
-            margin-bottom: 0;
-            list-style-type: none;
-            margin-right: 60px;
-            a{
-                color: $white;
-                font-size: 18px;
-                font-family: $manrope;
-                font-weight: $manrope-medium;
-                line-height: 38px;
-                img{
-                    margin-right: 20px;
-                }
-            }
-            a.active{
-                /*background-color: #6B6B6B;*/
-            }
-        }
-        li:last-child{
-            margin-right: 0;
-        }
-    }
-}
-
-.quick-nav-sub{
-    background-color: #6B6B6B;
-    .col-md-12{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        ul{
-            li{
-                padding: 10px 0;
-                a{
-                    font-size: 14px;
-                    color: rgba( $white, .7 );
-                }
-            }
-        }
-        a{
-            font-size: 14px;
-            color: rgba( $white, .7 ); 
-            img{
-                margin-right: 10px;
-            } 
-        }
-    }
-}
-
-.development-contribute-to-status{
-    background-color: $lighter-grey;
-    h2{
-        margin-bottom: 50px;
-    }
-    p{
-        margin-bottom: 115px;
-    }
-    .quick-start-guide{
-        font-size: 20px;
-        font-family: $manrope;
-        font-weight: $manrope-medium;
-        line-height: 32px;
-    }
-}
-
-.box-with-icon{
-    display: flex;
-    align-items: baseline;
-    padding-right: 60px;
-    img{
-        margin-right: 35px;
-    }
-    h3{
-        margin-bottom: 30px;
-    }
-    p{
-        color: rgba( $black, .8 ); 
-        font-size: 18px;
-        line-height: 31px;
-        margin-bottom: 30px;
-    }
-}
-
-.development-dapp{
-    ul{
-        padding: 0;
-        li{
-            list-style-type: none;
-            margin-bottom: 20px;
-        }
-    }
-    .development-build-dapp{
-        padding: 120px 0;
-        h2{
-            font-weight: $manrope-medium;
-        }
-    }
-}
-
-.development-extend-dapp{
-    h2{
-        font-weight: $manrope-medium;
-    }
-    .teaser-2{
-        margin-bottom: 50px;
-    }
-}
-
-.development-resources{
-    padding: 220px 0 160px 0;
-    .inner{
-        h2{
-            font-weight: $manrope-medium; 
-            margin-bottom: 70px;
-        }
-        ul{
-            padding: 0;
-            li{
-                list-style-type: none;
-                margin-bottom: 40px;
-                a{
-                    font-size: 16px;
-                }
-                p{
-                    color: rgba( $white, .8 ); 
-                    margin-bottom: 0;
-                }
-            }
-            li:last-child{
-                margin-bottom: 0;
-            }
-        }
-    }
-    .developer-resources{
-        ul{
-            li{
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-
-.development-get-in-touch{
-    .inner{
-        padding-right: 50px;
-        a{
-            font-family: $ibm-plex-mono;
-            font-weight: $ibm-plex-mono-semi-bold;
-            font-size: 16px;
-            line-height: 20px;
-            img{
-                margin-right: 10px;
-            }
-        }
-        p{
-            margin-top: 15px;
-        }
-    }
-}
-
-
-/*====== EDUCATE-PAGE ======*/
-
-.educate-contribute{
-    background-color: $lighter-grey;
-    .inner{
-        h2{
-            font-weight: $manrope-medium;
-            margin-bottom: 90px;
-        }
-        ul{
-            padding: 0;
-            li{
-                list-style-type: none;
-                margin-bottom: 45px;
-                p{
-                    color: rgba( $black, .8 );
-                    margin: 15px 0 0 0;
-                    a{
-                        color: rgba( $purple, .8 );
-                    }
-                }
-            }
-            li:last-child{
-                margin-bottom: 0;
-            }
-        }
-    }
-}
-
-.educate-translate{
-    padding: 140px;
-    h2{
-        font-weight: $manrope-medium;
-    }
-    ul{
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-       li{
-            list-style-type: none;
-            margin-bottom: 20px;
-            width: 50%;
-        } 
-    }
-}
-
-.educator-resources{
-    h2{
-        margin-bottom: 70px;
-    }
-    .inner{
-        ul{
-            padding: 0;
-            li{
-                list-style-type: none;
-                margin-bottom: 40px;
-            }
-            li:last-child{
-                margin-bottom: 0;
-            }
-        }
-    }
-    .educate-join{
-        ul{
-            li:nth-child(n+3){
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-
-
-/*===== COMMUNITY-GROUPS-PAGE =====*/
-
-
-.account-creation{
-    background-color: #F4F5F7;
-    padding: 30px 40px;
-    text-align: center;
-    flex: 1;
-    img{
-        margin-bottom: 25px;
-    }
-    a{
-        font-family: $ibm-plex-mono;
-        font-weight: $ibm-plex-mono-semi-bold;
-        font-size: 16px;
-        line-height: 20px;
-        display: block;
-    }
-    p{
-        font-family: $manrope;
-        font-weight: $manrope-medium;
-        font-size: 14px;
-        line-height: 21px;
-        color: #666D76;
-        margin: 20px 0 30px 0;
-    }
-    .occupation{
-        font-family: $manrope;
-        font-weight: $manrope-regular;
-        font-size: 14px;
-        line-height: 19px;
-        color: rgba($dark-grey, .8);
-        padding-right: 20px;
-    }
-    .name{
-        font-weight: $manrope-semi-bold;
-        color: $black;
     }
 }
