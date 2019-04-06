@@ -39,9 +39,14 @@ $(document).ready(function ($) {
     }
   }
 
-  $('.mobile-nav-trigger-close, .mobile-nav-trigger').on('click', function (event) {
+  $('.mobile-nav-trigger-close, .mobile-nav-trigger, .backdrop').on('click', function (event) {
     event.preventDefault();
     $('body').toggleClass('nav-active');
+  });
+
+  $('.community-nav-trigger-close, .community-nav-trigger, .backdrop-community-nav').on('click', function (event) {
+    event.preventDefault();
+    $('body').toggleClass('community-nav-active');
   });
 
   try {
@@ -157,7 +162,10 @@ $(document).ready(function ($) {
 
   if ($('.quick-nav').length) {
     var quickNavOffset = $('.quick-nav').offset().top;
-    $(window).scroll(function (event) {
+    $(window).on('resize', function () {
+      quickNavOffset = $('.quick-nav').offset().top;
+    });
+    $(window).on('scroll', function () {
       var y = $(window).scrollTop();
       if (y > quickNavOffset) {
         $('.quick-nav, .quick-nav-sub').addClass('fixed');
@@ -174,7 +182,87 @@ $(document).ready(function ($) {
     });
   }
 
-  // https://api.github.com/repos/status-im/status-react/issues?sort=created&per_page=20
+  if ($('.open-issues').length) {
+
+    var html = '';
+
+    if (typeof Cookies.get('open-issues') !== 'undefined') {
+      $('.open-issues ul').append(localStorage.getItem('open-issues'));
+    } else {
+      fetch('https://api.github.com/repos/status-im/status-react/issues?sort=created&per_page=30').then(function (response) {
+        if (response.status !== 200) {
+          console.log('Looks like there was a problem. Status Code: ' + response.status);
+          return;
+        }
+
+        response.json().then(function (data) {
+
+          var i = 0;
+
+          data.forEach(function (element) {
+            if (typeof element.pull_request === 'undefined') {
+              if (i < 4) {
+                var current = new Date();
+                var labelsHtml = '';
+                var labels = element.labels;
+                labels.forEach(label => {
+                  labelsHtml += '<a href="' + label.url + '" target="_blank">' + label.name + '</a>';
+                });
+                html += '<li> \
+                        <div class="number">#' + element.number + '</div> \
+                        <div class="details"> \
+                          <b><a href="' + element.url + '" target="_blank">' + element.title + '</a></b> \
+                          <div class="tags"> \
+                            ' + labelsHtml + ' \
+                          </div> \
+                        </div> \
+                        <div class="opened"> \
+                          Opened: <time>' + timeDifference(current, new Date(element.created_at)) + '</time> \
+                        </div> \
+                        <div class="activity"> \
+                          Last activity: <time>' + timeDifference(current, new Date(element.updated_at)) + '</time> \
+                        </div> \
+                      </li>';
+                i++;
+              }
+            }
+          });
+
+          localStorage.removeItem('open-issues');
+          localStorage.setItem('open-issues', html);
+          Cookies.set('open-issues', true, { expires: 1 });
+          $('.open-issues ul').append(html);
+        });
+      }).catch(function (err) {
+        console.log('Fetch Error :-S', err);
+      });
+    }
+  }
+
+  function timeDifference(current, previous) {
+
+    var msPerMinute = 60 * 1000;
+    var msPerHour = msPerMinute * 60;
+    var msPerDay = msPerHour * 24;
+    var msPerMonth = msPerDay * 30;
+    var msPerYear = msPerDay * 365;
+
+    var elapsed = current - previous;
+
+    if (elapsed < msPerMinute) {
+      return Math.round(elapsed / 1000) + ' seconds ago';
+    } else if (elapsed < msPerHour) {
+      return Math.round(elapsed / msPerMinute) + ' minutes ago';
+    } else if (elapsed < msPerDay) {
+      return Math.round(elapsed / msPerHour) + ' hours ago';
+    } else if (elapsed < msPerMonth) {
+      return Math.round(elapsed / msPerDay) + ' days ago';
+    } else if (elapsed < msPerYear) {
+      return Math.round(elapsed / msPerMonth) + ' months ago';
+    } else {
+      return Math.round(elapsed / msPerYear) + ' years ago';
+    }
+  }
 });
 
 },{}]},{},[1])

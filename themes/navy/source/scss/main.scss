@@ -1924,6 +1924,7 @@ footer{
         height: 100%;
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         &:hover{
             background-color: $purple;
         }
@@ -2053,6 +2054,9 @@ footer{
         a{
             font-size: 14px;
             color: rgba( $white, .7 ); 
+            &:hover{
+                color: $white;
+            }
             img{
                 margin-right: 10px;
             } 
@@ -2062,7 +2066,6 @@ footer{
 
 .development-contribute-to-status{
     background-color: $lighter-grey;
-    margin-top: 100px;
     .quick-start-guide{
         font-size: 20px;
         font-family: $manrope;
@@ -2073,23 +2076,18 @@ footer{
 
 .box-with-icon{
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     padding-right: 60px;
     img{
         margin-right: 35px;
     }
-    h3{
-        margin-bottom: 30px;
-    }
     p{
         color: rgba( $black, .8 ); 
-        font-size: 18px;
-        line-height: 31px;
-        margin-bottom: 30px;
     }
 }
 
 .open-issues{
+    margin-bottom: 70px;
     ul{
         list-style-type: none;
         margin: 90px 0 0;
@@ -2099,6 +2097,9 @@ footer{
             padding-bottom: 25px;
             margin-bottom: 20px;
             border-bottom: 1px solid rgba( $light-grey, .2 );
+            &:last-child{
+                margin: 0;
+            }
             .number{
                 font-size: 16px;
                 line-height: 20px;
@@ -2115,8 +2116,13 @@ footer{
                     line-height: 22px;
                     font-family: $manrope;
                     font-weight: $manrope-medium;
-                    color: $black;
                     margin-bottom: 13px;
+                    a{
+                        color: $black;
+                        &:hover{
+                            color: $purple;
+                        }
+                    }
                 }
                 .tags{
                     display: flex;
@@ -2143,7 +2149,8 @@ footer{
                 font-size: 13px;
                 line-height: 19px;
                 color: rgba( $light-grey, .7 );
-                margin-left: 50px;
+                min-width: 220px;
+                justify-content: flex-end;
                 font-family: $manrope;
                 font-weight: $manrope-medium;
                 time{
@@ -2151,6 +2158,15 @@ footer{
                     margin-left: 5px;
                 }
             }
+        }
+    }
+    .link-arrow{
+        display: block;
+        padding: 11px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba( $light-grey, .2 );
+        &:after{
+            display: none;
         }
     }
 }
@@ -2164,37 +2180,23 @@ footer{
         }
     }
     .development-build-dapp{
-        padding: 120px 0;
-        h2{
-            font-weight: $manrope-medium;
-        }
+        padding: 120px 15px;
     }
 }
 
 .development-extend-dapp{
-    h2{
-        font-weight: $manrope-medium;
-    }
-    .teaser-2{
-        margin-bottom: 50px;
+    .inner{
+        padding: 120px 0 90px 90px;
     }
 }
 
 .development-resources{
-    padding: 220px 0 160px 0;
     .inner{
-        h2{
-            font-weight: $manrope-medium; 
-            margin-bottom: 70px;
-        }
         ul{
             padding: 0;
             li{
                 list-style-type: none;
                 margin-bottom: 40px;
-                a{
-                    font-size: 16px;
-                }
                 p{
                     color: rgba( $white, .8 ); 
                     margin-bottom: 0;
@@ -2343,6 +2345,99 @@ footer{
         font-weight: $manrope-semi-bold;
         color: $black;
     }
+}
+
+.community-nav{
+    background:$white;
+    box-shadow: 0px 2px 14px rgba($light-black, 0.25);
+    border-radius: 4px;
+    position: fixed;
+    z-index: 999;
+    left: 10px;
+    top: 100px;
+    width: calc(100% - 20px);
+    padding: 15px 20px 20px 20px;
+    flex-direction: column;
+    opacity: 0;
+    transform: translate3d(0,15px,0) scale(.96);
+    visibility: hidden;
+    transition: all .3s ease;
+    pointer-events: none;
+    font-family: $manrope;
+    nav{
+        ul{
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            li{
+                width: 100%;
+                &:last-child{
+                    a{
+                        border: none;
+                        padding-bottom: 0;
+                    }
+                }
+                a{
+                    font-size: 14px;
+                    padding: 8px 0;
+                    display: block;
+                    width: 100%;
+                    border-bottom: 1px solid #EBEBEB;
+                    color: $dark-grey;
+                    font-weight: 600;
+                    .arrow{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .community-nav-trigger-close{
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 17px;
+    }
+}
+
+.backdrop-community-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(9, 9, 9, 0.4) 0%, rgba(9, 9, 9, 0.1) 100%);
+    visibility: hidden;
+    transition: all .3s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 998;
+}
+
+.community-nav-active{
+    .community-nav{
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+        pointer-events: all;
+    }
+    .backdrop-community-nav{
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.community-nav-trigger{
+    pointer-events: none;
+}
+
+.position-relative{
+    height: 100px;
 }
 
 @media (max-width: 1499px){
@@ -2562,6 +2657,31 @@ footer{
             }
         }
     }
+    .quick-nav{
+        ul{
+            li{
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .development-contribute-to-status{
+        .quick-start-guide{
+            line-height: 22px;
+            font-size: 14px;
+        }
+    }
+    .development-extend-dapp{
+        .inner {
+            padding: 40px 0 50px 40px;
+        }
+    }
+    .development-get-in-touch{
+        .inner {
+            padding-right: 0;
+        }
+    }
 }
 
 @media screen and (max-width: 1300px) {
@@ -2702,6 +2822,59 @@ footer{
             }
         }
     } 
+    .quick-nav,
+    .quick-nav-sub{
+        display: none;
+    }
+    .development-contribute-to-status{
+        margin: 0;
+    }
+    .box-with-icon{
+        padding: 0;
+    }
+    .open-issues{
+        ul{
+            margin-top: 30px;
+            li{
+                align-items: flex-start;
+                flex-wrap: wrap;
+                .number{
+                    display: none;
+                }
+                .details{
+                    width: 100%;
+                    flex: auto;
+                    b{
+                        font-size: 14px;
+                        line-height: 19px;
+                        margin-bottom: 10px;
+                    }
+                    .tags{
+                        display: none;
+                    }
+                }
+                .opened,
+                .activity{
+                    min-width: 50px;
+                    font-size: 12px;
+                    line-height: 19px;
+                }
+                .opened{
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+    .community-nav-trigger{
+        background: rgba($light-black, 0.1);
+        border-radius: 5px;
+        padding: 8px 55px 8px 10px;
+        display: inline-block;
+        background-image: url('../img/arrow-bold.svg');
+        background-position: center right 20px;
+        background-repeat: no-repeat;
+        pointer-events: all;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -3135,5 +3308,38 @@ footer{
         .open-source-illustration-horz{
             display: block;
         }
+    }
+    .development-contribute-to-status{
+        .teaser-2{
+            margin: 0;
+        }
+    }
+    .box-with-icon{
+        flex-direction: column;
+        margin-top: 50px;
+        img{
+            margin-bottom: 20px;
+            margin-right: 15px;
+            max-width: 30px;
+        }
+        .link-arrow{
+            font-size: 14px;
+        }
+    }
+    .open-issues {
+        margin-bottom: 20px;
+    }
+    .development-dapp{
+        .development-build-dapp {
+            padding: 70px 15px 50px;
+        }
+    }
+    .development-extend-dapp{
+        .inner{
+            padding: 70px 0 30px 0;
+        }
+    }
+    .contribute-support{
+        margin-bottom: 50px;
     }
 }
