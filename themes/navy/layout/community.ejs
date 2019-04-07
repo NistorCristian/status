@@ -2,93 +2,106 @@
 <main id="main" role="main">
 
 	<!-- COMMUNITY-OPEN-SOURCE -->
-	<section class="development-open-source community-open-source">
+	<section class="get-involved-intro p-t-160 p-b-160">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<p class="statement">An Open Source Community</p>
-					<h1>Community Groups</h1>
+					<h4>An Open Source Community</h4>
+					<h1 class="community-nav-trigger">Community Groups</h1>
 					<p class="teaser-1">There are a number of both Status run and community organized groups within the Status community. Join an existing group or start your own group based on your personal interests.</p>
+					<div class="open-source-illustration-horz"><%- image_tag("/img/open-source-illustration-horz.svg") %></div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- END-COMMUNITY-OPEN-SOURCE -->
 
-	<!-- QUICK-NAV -->
-	<section class="quick-nav">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<ul>
-						<li><a href="#"><%- image_tag("/img/development-small-icon.svg") %>Development</a></li>
-						<li><a href="#"><%- image_tag("/img/educate-small-icon.svg") %>Educate</a></li>
-						<li><a href="#" class="active"><%- image_tag("/img/community-groups-small-icon.svg") %>Community Groups</a></li>
-					</ul>
+	<div class="position-relative">
+		<!-- DEVELOPMENT-QUICK-NAV -->
+		<section class="quick-nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul>
+							<li><a href="/get-involved/development/"><%- image_tag("/img/development-small-icon.svg") %>Development</a></li>
+							<li><a href="/get-involved/educate/"><%- image_tag("/img/educate-small-icon.svg") %>Educate</a></li>
+							<li><a href="/get-involved/community/" class="active"><%- image_tag("/img/community-groups-small-icon.svg") %>Community Groups</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!-- END-QUICK-NAV -->
+		</section>
+		<!-- END-DEVELOPMENT-QUICK-NAV -->
+	</div>
 
 	<!-- BLOCK-ACCOUNT-CREATION -->
 	<section class="block-account-creation p-t-160 p-b-160">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-lg-6 col-xl-4">
 					<div class="account-creation">
 						<%- image_tag("/img/status-ambassadors.svg") %>
 						<a href="#">#Status-ambassadors</a>
 						<p>A group of people dedicated to helping, contributing, and building the Status community</p>
-						<span class="occupation">Organizer</span>
-						<span class="name">Jinho jang</span>
+						<div class="meta">
+							<span class="occupation">Organizer</span>
+							<span class="name">Jinho jang</span>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-6 col-xl-4">
 					<div class="account-creation">
 						<%- image_tag("/img/art-decentralized.svg") %>
 						<a href="#">#Art-decentralized</a>
 						<p>We are sharing great art, mostly self-made. You can also purchase digital art with crypto!</p>
-						<span class="occupation">Organizer</span>
-						<span class="name">Jessica Angel</span>
+						<div class="meta">
+							<span class="occupation">Organizer</span>
+							<span class="name">Jessica Angel</span>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-6 col-xl-4">
 					<div class="account-creation">
 						<%- image_tag("/img/philosophers.svg") %>
 						<a href="#">#philosophers</a>
 						<p>What’s the purpose of life?</p>
-						<span class="occupation">Organizer</span>
-						<span class="name">Aristotle</span>
+						<div class="meta">
+							<span class="occupation">Organizer</span>
+							<span class="name">Aristotle</span>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
+				<div class="col-lg-6 col-xl-4">
 					<div class="account-creation">
 						<%- image_tag("/img/status-korea.svg") %>
 						<a href="#">#Status-Korea</a>
 						<p>Community group of Status users and developers based in South Korea.</p>
-						<span class="occupation">Organizer</span>
-						<span class="name">Dea Yung</span>
+						<div class="meta">
+							<span class="occupation">Organizer</span>
+							<span class="name">Dea Yung</span>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-6 col-xl-4">
 					<div class="account-creation">
 						<%- image_tag("/img/status-california.svg") %>
 						<a href="#">#Status-California</a>
 						<p>Community group of Status users from California.</p>
-						<span class="occupation">Organizer</span>
-						<span class="name">Amanda Clark</span>
+						<div class="meta">
+							<span class="occupation">Organizer</span>
+							<span class="name">Amanda Clark</span>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-6 col-xl-4">
 					<div class="account-creation">
 						<%- image_tag("/img/status-norway.svg") %>
 						<a href="#">#Status-Norway</a>
 						<p>Norwegian Status group.</p>
-						<span class="occupation">Organizer</span>
-						<span class="name">Hendrik Olafson</span>
+						<div class="meta">
+							<span class="occupation">Organizer</span>
+							<span class="name">Hendrik Olafson</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -96,5 +109,18 @@
 	</section>
 	<!-- END-BLOCK-ACCOUNT-CREATION -->
 
+	<div class="community-nav">
+		<a href="#" class="community-nav-trigger-close">
+			<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="1.5752" y="0.368273" width="22" height="1" rx="0.5" transform="rotate(45 1.5752 0.368273)" fill="#090909"></rect> <rect x="0.868164" y="15.9246" width="22" height="1" rx="0.5" transform="rotate(-45 0.868164 15.9246)" fill="#090909"></rect> </svg>
+		</a>
+		<nav>
+			<ul>
+				<li><a href="/get-involved/development/">Development</a></li>
+				<li><a href="/get-involved/educate/">Educate</a></li>
+				<li><a href="/get-involved/community/" class="active">Community Groups</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="backdrop-community-nav"></div>
 
 </main>

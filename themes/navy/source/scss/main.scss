@@ -306,6 +306,11 @@ h4{
         border: 1px solid $dark-grey;
         color: $black;
         box-shadow: 0 0 0 2px rgba($white,.25);
+        svg{
+            path{
+                fill: $black;
+            }
+        }
     }
 }
 
@@ -685,6 +690,15 @@ header{
                             li{
                                 margin-right: 10px;
                                 width: auto;
+                                a{
+                                    &:hover{
+                                        svg{
+                                            path{
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -1332,6 +1346,9 @@ footer{
                 line-height: 15px;
                 font-size: 12px;
                 color: #9299A3;
+                text-align: center;
+                padding: 0 10px;
+                height: 15px;
             }
             ul{
                 list-style-type: none;
@@ -2240,10 +2257,6 @@ footer{
 .educate-contribute{
     background-color: $lighter-grey;
     .inner{
-        h2{
-            font-weight: $manrope-medium;
-            margin-bottom: 90px;
-        }
         ul{
             padding: 0;
             li{
@@ -2252,9 +2265,6 @@ footer{
                 p{
                     color: rgba( $black, .8 );
                     margin: 15px 0 0 0;
-                    a{
-                        color: rgba( $purple, .8 );
-                    }
                 }
             }
             li:last-child{
@@ -2265,9 +2275,16 @@ footer{
 }
 
 .educate-translate{
-    padding: 140px;
-    h2{
-        font-weight: $manrope-medium;
+    .inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    .inner-img{
+        img{
+            max-width: 100%;
+        }
     }
     ul{
         padding: 0;
@@ -2282,9 +2299,6 @@ footer{
 }
 
 .educator-resources{
-    h2{
-        margin-bottom: 70px;
-    }
     .inner{
         ul{
             padding: 0;
@@ -2314,7 +2328,9 @@ footer{
     background-color: #F4F5F7;
     padding: 30px 40px;
     text-align: center;
-    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     img{
         margin-bottom: 25px;
     }
@@ -2324,6 +2340,14 @@ footer{
         font-size: 16px;
         line-height: 20px;
         display: block;
+        &::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
     p{
         font-family: $manrope;
@@ -2342,8 +2366,24 @@ footer{
         padding-right: 20px;
     }
     .name{
+        font-family: $manrope;
         font-weight: $manrope-semi-bold;
         color: $black;
+        font-size: 14px;
+    }
+    .meta{
+        margin-top: auto;
+    }
+}
+
+.block-account-creation{
+    .account-creation{
+        height: 100%;
+    }
+    .row{
+        .col-xl-4{
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -2440,6 +2480,30 @@ footer{
     height: 100px;
 }
 
+.template-community{
+    .position-relative{
+        height: 60px;
+    }
+}
+
+.download-apps{
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            list-style-type: none;
+            margin: 0 20px 10px 0;
+            img{
+                display: block;
+                margin: 20px auto;
+            }
+        }
+    }
+}
+
 @media (max-width: 1499px){
     .container {
         max-width: 1170px;
@@ -2452,20 +2516,20 @@ footer{
         margin-bottom: 20px;
     }
     h1{
-        line-height: 44px;
-        font-size: 38px;
+        line-height: 54px;
+        font-size: 48px;
     }
-    h2{
-        line-height: 31px;
-        font-size: 31px;
+    h2 {
+        line-height: 46px;
+        font-size: 36px;
     }
-    h3{
-        line-height: 38px;
-        font-size: 25px;
+    h3 {
+        line-height: 42px;
+        font-size: 32px;
     }
     h4{
-        line-height: 28px;
-        font-size: 18px;
+        line-height: 32px;
+        font-size: 22px;
     }
     .teaser-1{
         line-height: 26px;
@@ -2480,7 +2544,6 @@ footer{
     .p-large{
         line-height: 24px;
         font-size: 14px;
-        margin-bottom: 20px;
     }
     .btn{
         line-height: 18px;
@@ -2499,13 +2562,38 @@ footer{
     .p-t-160 {
         padding-top: 100px;
     }
+    .m-b-100 {
+        margin-bottom: 70px;
+    }
+    .m-t-90 {
+        margin-top: 50px;
+    }
+    .inline-links{
+        li{
+            a{
+                font-size: 14px;
+            }
+        }
+    }
+    .link-arrow{
+        font-size: 14px;
+    }
+    header{
+        nav{
+            ul{
+                li{
+                    a{
+                        padding: 10px 20px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
     .home-intro{
         img{
             width: 100%;
             margin-left: -80px;
-        }
-        .announcement{
-            display: none;
         }
     }
     .home-private{
@@ -2515,7 +2603,7 @@ footer{
                 margin: 0 0 10px;
             }
             img{
-                width: 100%;
+                width: 80%;
             }
         }
     } 
@@ -2524,7 +2612,7 @@ footer{
             padding: 50px 0;
             img{
                 margin-bottom: 50px;
-                width: 100%;
+                width: 80%;
             }
         }
     }
@@ -2532,7 +2620,7 @@ footer{
         .inner{
             padding-top: 50px;
             img{
-                width: 100%;
+                width: 80%;
                 margin-top: 50px;
             }
             .teaser-2{
@@ -2545,7 +2633,7 @@ footer{
             padding: 50px 20px 50px 40px;
             img{
                 margin-bottom: 50px;
-                width: 100%;
+                width: 80%;
             }
             .teaser-2{
                 margin-bottom: 10px;
@@ -2553,13 +2641,25 @@ footer{
         }
     }
     .features-chat{
+        margin-top: 50px;
         .inner{
+            padding-top: 100px;
             padding-bottom: 100px;
+        }
+        .img-holder{
+            img{
+                max-width: 80%;
+                margin: -100px auto 0 auto;
+                display: block;
+            }
         }
     }
     .features-wallet{
+        img{
+            max-width: 80%;
+        }
         .inner {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
     }
     .features-desktop{
@@ -2568,12 +2668,22 @@ footer{
         }
     }
     .features-browser{
+        img{
+            max-width: 80%;
+        }
         .inner{
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
     }
     .security-inner {
         padding-top: 100px;
+    }
+    .about-chat{
+        .inline-links{
+            li{
+                font-size: 15px;
+            }
+        }
     }
     .about-principles{
         .roman-list{
@@ -2601,16 +2711,24 @@ footer{
         .apps-mobile{
             .inner{
                 padding-top: 90px;
+                .row{
+                    height: 100%;
+                    .col-md-10{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
             }
             img{
                 max-width: 100%;
+                margin-top: auto;
             }
         }
         .buttons{
             margin-bottom: 60px;
         }
         .apps-mac-windows-or-linux{
-            padding-top: 50px;
+            transform: translateY(0);
             .inner{
                 padding-left: 40px;
                 .p-large {
@@ -2624,10 +2742,6 @@ footer{
                 margin-bottom: 40px;
                 font-size: 12px;
                 line-height: 18px;
-            }
-            .img-holder {
-                height: 240px;
-                width: calc(50vw - 55px);
             }
         }
     }
@@ -2654,6 +2768,7 @@ footer{
         .box-link{
             .title{
                 font-size: 20px;
+                margin-bottom: 30px;
             }
         }
     }
@@ -2699,6 +2814,25 @@ footer{
 }
 
 @media screen and (max-width: 1199px) {
+    h1{
+        line-height: 44px;
+        font-size: 38px;
+    }
+    h2{
+        line-height: 31px;
+        font-size: 31px;
+    }
+    h3{
+        line-height: 38px;
+        font-size: 25px;
+    }
+    h4{
+        line-height: 28px;
+        font-size: 18px;
+    }
+    .p-large{
+        margin-bottom: 20px;
+    }
     .container{
         padding-left: 20px;
         padding-right: 20px;
@@ -2766,6 +2900,19 @@ footer{
             margin-bottom: 10px;
         }
     }
+    .home-decentralized .inner img,
+    .home-private .inner img,
+    .home-browser .inner img,
+    .home-wallet .inner img{
+        width: 100%;
+    }
+    .features-wallet img,
+    .features-browser img{
+        max-width: 100%;
+    }
+    .get-involved-box-links .box-link{
+        padding: 30px 20px;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -2822,8 +2969,7 @@ footer{
             }
         }
     } 
-    .quick-nav,
-    .quick-nav-sub{
+    .position-relative{
         display: none;
     }
     .development-contribute-to-status{
@@ -2831,6 +2977,10 @@ footer{
     }
     .box-with-icon{
         padding: 0;
+    }
+    .apps-content .apps-mac-windows-or-linux .img-holder{
+        height: 240px;
+        width: calc(50vw - 55px);
     }
     .open-issues{
         ul{
@@ -2875,9 +3025,27 @@ footer{
         background-repeat: no-repeat;
         pointer-events: all;
     }
+    .block-account-creation{
+        padding-top: 0;
+    }
+    .block-account-creation{
+        .row{
+            .col-xl-4 {
+                margin-bottom: 10px;
+            }
+        }
+        .account-creation{
+            margin: 0 -20px;
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
+    .home-intro{
+        .announcement{
+            display: none;
+        }
+    }
     .container{
         padding-right: 20px;
         padding-left: 20px;
@@ -3341,5 +3509,48 @@ footer{
     }
     .contribute-support{
         margin-bottom: 50px;
+    }
+    .educate-translate{
+        .inner-img{
+            display: none
+        }
+    }
+    .educate-translate{
+        ul{
+            flex-wrap: wrap;
+            margin: 0;
+            li{
+                width: 100%;
+                &:last-child{
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .educate-contribute{
+        .how-to-get-started{
+            margin-bottom: 50px;
+        }
+    }
+    .educator-resources{
+        .inner{
+            ul {
+                li{
+                    &:last-child {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .development-get-in-touch{
+        .inner{
+            p{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .block-account-creation{
+        padding-top: 0;
     }
 }

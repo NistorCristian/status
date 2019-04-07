@@ -29,6 +29,26 @@ hexo.extend.helper.register('join_status_chat', function() {
   return `<a href="${url}" class="button">Join Status Chat</a>`;
 });
 
+hexo.extend.helper.register('employees', function(type) {
+  var employees = this.site.data.employees,
+    result = '';
+  _.each(employees['employees'], function(employee, index) {
+    result += '<li class="contributor col-md-1"> \
+      <a href="#" class="contributor-trigger"><img src="'+ employee['photoUrl'] +'"></a> \
+      <div class="contributor-info">\
+        <img src="'+ employee['photoUrl'] +'"> \
+        <b>'+ employee['displayName'] +'</b> \
+        <span>'+ employee['jobTitle'] +'</span> \
+        <ul>\
+          <li><a href="'+ employee['customStatusPublicKey'] +'"><img src="/img/icon-status-purple.svg"></a></li> \
+          <li><a href="'+ employee['customGitHubusername'] +'"><img src="/img/icon-github-purple.svg"></a></li> \
+        </ul>\
+      </div>\
+    </li>'
+  });
+  return result;
+});
+
 hexo.extend.helper.register('sidebar', function(type) {
     
   var self = this,

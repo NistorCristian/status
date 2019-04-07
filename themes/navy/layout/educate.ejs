@@ -7,8 +7,9 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h4>An Open Source Community</h4>
-					<h1>Educate</h1>
+					<h1 class="community-nav-trigger">Educate</h1>
 					<p class="teaser-1">We welcome anyone to help educate others on how to build status, use status, get started in the community, or even share their own experiences with the project.</p>
+					<div class="open-source-illustration-horz"><%- image_tag("/img/open-source-illustration-horz.svg") %></div>
 				</div>
 			</div>
 		</div>
@@ -16,43 +17,42 @@
 	<!-- END-EDUCATE-OPEN-SOURCE -->
 
 	<div class="position-relative">
-			<!-- DEVELOPMENT-QUICK-NAV -->
-			<section class="quick-nav">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<ul>
-								<li><a href="/get-involved/development/"><%- image_tag("/img/development-small-icon.svg") %>Development</a></li>
-								<li><a href="/get-involved/educate/" class="active"><%- image_tag("/img/educate-small-icon.svg") %>Educate</a></li>
-								<li><a href="/get-involved/community/"><%- image_tag("/img/community-groups-small-icon.svg") %>Community Groups</a></li>
-							</ul>
-						</div>
+		<!-- DEVELOPMENT-QUICK-NAV -->
+		<section class="quick-nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul>
+							<li><a href="/get-involved/development/"><%- image_tag("/img/development-small-icon.svg") %>Development</a></li>
+							<li><a href="/get-involved/educate/" class="active"><%- image_tag("/img/educate-small-icon.svg") %>Educate</a></li>
+							<li><a href="/get-involved/community/"><%- image_tag("/img/community-groups-small-icon.svg") %>Community Groups</a></li>
+						</ul>
 					</div>
 				</div>
-			</section>
-			<!-- END-DEVELOPMENT-QUICK-NAV -->
-	
-			<!-- DEVELOPMENT-QUICK-NAV-SUB -->
-			<section class="quick-nav-sub">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<ul>
-								<li><a href="#contribute-to-status">Contribute to Status</a></li>
-								<li><a href="#build-dapps">Build DApps</a></li>
-								<li><a href="#extend-dapps">Extend DApps</a></li>
-								<li><a href="#developer-resources">Developer Resources</a></li>
-							</ul>
-							<a href="https://github.com/status-im" target="_blank"><%- image_tag("/img/github-white-logo.svg") %>Github</a>
-						</div>
+			</div>
+		</section>
+		<!-- END-DEVELOPMENT-QUICK-NAV -->
+
+		<!-- DEVELOPMENT-QUICK-NAV-SUB -->
+		<section class="quick-nav-sub">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul>
+							<li><a href="#educate-and-create">Educate and create</a></li>
+							<li><a href="#translate">Translate</a></li>
+							<li><a href="#educator-resources">Educator Resources</a></li>
+						</ul>
+						<a href="https://github.com/status-im" target="_blank"><%- image_tag("/img/github-white-logo.svg") %>Github</a>
 					</div>
 				</div>
-			</section>
-			<!-- END-DEVELOPMENT-QUICK-NAV-SUB -->
-		</div>
+			</div>
+		</section>
+		<!-- END-DEVELOPMENT-QUICK-NAV-SUB -->
+	</div>
 
 	<!-- EDUCATE-CONTRIBUTE -->
-	<section class="educate-contribute p-t-160 p-b-160">
+	<section class="educate-contribute p-t-160 p-b-160" id="educate-and-create">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -88,7 +88,7 @@
 							</li>
 							<li>
 								<a href="#" class="link-arrow">Write a blog post</a>
-								<p>Share a story on the status blog <a href="#">our.status.im</a></p>
+								<p>Share a story on the status blog <a href="https://our.status.im">our.status.im</a></p>
 							</li>
 						</ul>
 					</div>
@@ -99,12 +99,12 @@
 	<!-- END-EDUCATE-CONTRIBUTE -->
 
 	<!-- EDUCATE-TRANSLATE -->
-	<section class="educate-translate">
+	<section class="educate-translate p-b-160 p-t-160" id="translate">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="inner-img">
-
+						<%- image_tag("/img/translate.svg") %>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -125,7 +125,7 @@
 	<!-- END-EDUCATE-TRANSLATE -->
 
 	<!-- EDUCATOR-RESOURCES -->
-	<section class="educator-resources col-dark-grey col-black p-t-160 p-b-160">
+	<section class="educator-resources col-dark-grey col-black p-t-160 p-b-160" id="educator-resources">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">

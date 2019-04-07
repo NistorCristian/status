@@ -315,20 +315,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<ul class="contributors row m-t-90">
-						<% for(var i=1; i <= 44; i++) { %>
-						<li class="contributor col-md-1">
-							<a href="#"><%- image_tag("/img/core-contributor-"+ i + ".png") %></a>
-							<div class="contributor-info">
-								<%- image_tag("/img/core-contributor-"+ i + ".png") %>
-								<b>Ivan Morais <%= i %></b>
-								<span>Engineering</span>
-								<ul>
-									<li><a href="#"><%- image_tag("/img/icon-status-purple.svg") %></a></li>
-									<li><a href="#"><%- image_tag("/img/icon-github-purple.svg") %></a></li>
-								</ul>
-							</div>
-						</li>
-						<% } %>
+						<%- employees() %>
 					</ul>
 				</div>
 			</div>

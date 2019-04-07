@@ -14,6 +14,7 @@ const minify = require('gulp-minify');
 const cleanCSS = require('gulp-clean-css');
 const rename = require("gulp-rename");
 const run = require('gulp-run-command').default;
+// const bamboo = require('./scripts/bamboo-hr');
 
 const genqr = require('./scripts/gen-qr');
 const updateBuilds = require('./scripts/update-builds');
@@ -109,6 +110,10 @@ gulp.task('nightlies', function() {
 gulp.task('releases', function() {
     return updateBuilds('releases', 'release.json')
 })
+
+// gulp.task('employees', async function() {
+//     return bamboo.saveEmployees('source/_data/employees.yml')
+// })
 
 gulp.task('genqr', function() {
     genqr('nightlies', 'APK',   'public/nightly/img', 'qr-apk.png')

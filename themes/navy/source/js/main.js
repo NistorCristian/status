@@ -239,6 +239,10 @@ $(document).ready(function ($) {
     }
   }
 
+  $('.contributor .contributor-trigger').on('click', function (event) {
+    event.preventDefault();
+  });
+
   function timeDifference(current, previous) {
 
     var msPerMinute = 60 * 1000;
