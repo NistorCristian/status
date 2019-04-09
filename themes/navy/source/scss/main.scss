@@ -1059,13 +1059,19 @@ footer{
 }
 
 .features-desktop{
-    padding-top: 130px;
     background: linear-gradient(166.71deg, #FFFFFF 12.37%, #EBECF0 68.96%);
+    .inner{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+    }
     .img-holder{
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        margin-top: auto;
+        align-items: center;
+        justify-content: center;
     }
     .announcement{
         font-family: $manrope;
@@ -1701,6 +1707,7 @@ footer{
 
 .single-docs-content{
     margin: 100px 0;
+    padding: 0 25px;
     .page-title{
         margin-top: 0;
         line-height: 44px;
@@ -1772,6 +1779,32 @@ footer{
             margin: 30px auto;
             max-width: 100%;
             height: auto;
+        }
+    }
+}
+
+.right-sub-navigation{
+    ul{
+        list-style-type: none;
+        margin: 40px 0 0 0;
+        padding: 0 0 30px;
+        li{
+            margin-bottom: 20px;
+            &.li-h2{
+                margin-left: 20px;
+            }
+            &.li-h3{
+                margin-left: 40px;
+            }
+            a{
+                font-size: 14px;
+                line-height: 18px;
+                color: rgba( $black, .6 );
+                display: block;
+                &:hover{
+                    color: $black;
+                }
+            }
         }
     }
 }
