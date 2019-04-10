@@ -49,6 +49,28 @@ hexo.extend.helper.register('employees', function(type) {
   return result;
 });
 
+hexo.extend.helper.register('contributors', function(type) {
+  var employees = this.site.data.employees,
+    contributors = this.site.data.contributors,
+    result = '';
+
+  _.each(contributors['result'], function(contributor, index) {
+    result += '<li class="contributor col-md-1"> \
+      <a href="#" class="contributor-trigger"><img src="'+ contributor['avatar_url'] +'"></a> \
+      <div class="contributor-info">\
+        <img src="'+ contributor['avatar_url'] +'"> \
+        <b>'+ contributor['login'] +'</b> \
+        <span></span> \
+        <ul>\
+          <li><a href="'+ contributor['url'] +'"><img src="/img/icon-github-purple.svg"></a></li> \
+        </ul>\
+      </div>\
+    </li>'
+  });
+
+  return result;
+});
+
 hexo.extend.helper.register('sidebar', function(type) {
     
   var self = this,
