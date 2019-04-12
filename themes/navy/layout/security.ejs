@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="container m-b-100">
-			<h2 class="m-b-100">What does security <br>mean to Status</h2>
+			<h2 class="m-b-100">Security at Status</h2>
 			<div class="row">
 				<div class="col-lg-4">
 					<h4 class="m-b-25">Secure <br> Messaging</h4>
@@ -35,21 +35,38 @@
 		<div class="container security-content">
 			<div class="row">
 				<div class="col-md-12">
-					<h3>How does Status make my messages secure?</h3>
-					<p class="p-large">When looking at how to achieve mass adoption for a client, we looked at how people interact with their devices. For instance, as of 2014 more time is spent on mobile devices compared with desktop PCs. Moreover, a third of that total time is spent within instant messaging applications. Amongst mobile apps, instant messengers have the highest retention rates. Once installed they become sticky and typically users won’t uninstall immediately. Therefore, for mass adoption an instant messenger simply makes senses. Once network effects come into play and user’s friends also begin to utilise the app the average user lifetime skyrockets. When you start thinking about this as a user base and how to connect that with Ethereum, things like payments and applications built atop of Ethereum and integrated into a conversational interface begin to seem like a clear path forward.</p>
-					<h3>Account Creation</h3>
-					<p class="p-large">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+					<h3>Secure Identity</h3>
+					<p class="p-large">Your identity in Status starts with a locally generated cryptographic keypair, which is then protected via a password.  That’s all that is required.  The user then has the ability to add information to their profile to build up who they are in Status.  At all times the user has full control over their information, and who has access to it.  The end user can be as public or private as they want.</p>
+					<h3>Peer-to-Peer Serverless Messaging</h3>
+					<p class="p-large">Status uses the whisper protocol for peer to peer (p2p) messaging. Meaning there are no central servers processing or storing your messages. Instead, whisper is a p2p gossip protocol used for sending and receiving messages. Whisper messaging aims to deliver “darkness” via multicast dark routing. Multicast means that when Alice wants to send a message to Bob, she actually broadcast that message to basically the whole network, though it is encrypted with Bob’s public key, or the #topic of the public chat where they are chatting. Therefore, only the intended recipient(s) can decrypt the message. The Status team is also researching and developing new, more reliable, more scalable, and more efficient means of secure p2p messaging.</p> 
+					<p><a href="/research/" class="link-arrow">Learn more about Whisper</a></p>
+					<h3>End-to-End Encryption by Default</h3>
+					<p class="p-large">Since Status leverages the Whisper protocol for messaging, all messaged are e2e encrypted by default. This refers to the fact that the Status app uses the user’s local cryptographic keypair to encrypt messages. It supports both symmetric and asymmetric encryption. This ensures that only you and the people you're communicating with can read what is sent, and nobody in between, not even Status.</p>
+					<h3>Perfect Forward Secrecy</h3>
+					<p class="p-large">PFS is a feature of specific key-agreement protocols which provide assurances that your session keys will not be compromised even if the private keys of the participants are compromised. Specifically, past messages cannot be decrypted by a third-party who manages to get a hold of a private key. It builds on the X3DH and Double Ratchet specifications from Open Whisper Systems, with some adaptations to operate in a decentralized environment. Perfect Forward Secrecy is an added layer of security for all of your 1:1 private chats.</p>
+					<p><a href="/research/pfs.html" class="link-arrow">Learn more about PFS</a></p>
+					<h3>Serverless Account Creation</h3>
+					<p class="p-large">When you create a new account on Status, you will never be asked for third party verification such as an email or phone number. This means you can sign up for and create a Status account completely anonymously. When you create an account, it is simply you and your keys. This also means that two factor authentication and password recovery are not features within Status - so be sure to remember your password and mnemonic phrase and store them offline somewhere extremely safe.</p>
+					<h3>How are my keys generated?</h3>
+					<p class="p-large">TBD</p>
+					<h3>How are my keys stored?</h3>
+					<p class="p-large">TBD</p>
 					<h3>Secure Browsing</h3>
-					<p class="p-large">No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
-					<h3>Rigourous Auditing</h3>
-					<p class="p-large">As we reach major milestones in development, after rounds of internal review and auditing, we reach out to third parties to verify our sanity, and double/triple check the work that we do. These security audits are not guarantees of security in the projects they pertain to. They are additional checks from objective third parties to help bolster confidence in the security of intended functionality.</p>
-					<p class="p-large">As always, if you find a bug or vulnerability in our code, please report it to security@status.im.</p>
-					<h3>Threat Modeling with STRIDE</h3>
-					<p class="p-large">Threat modelling is a way to try to identify risks and threats in the application. It usually is done from the point of view of an attacker. STRIDE is an acronym that stands for: Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of priviledge.</p>
-					<p class="p-large">We try to apply all 6 attack types to every component or data flow of the system and coming up with the possible attack vectors.</p>
+					<p class="p-large">TBD</p>
+					<h3>How does Status protect my cryptocurrency?</h3>
+					<p class="p-large">Status is built with a non-custodial wallet, giving you full control over your funds without the use of a server. The private keys are stored in an encrypted manner on your device. Your money is under your control, and cannot be accessed by anyone without the private key. Therefore, if you lose your mnemonic phrase, you will never be able to restore access to your funds. So keep your private keys somewhere safely offline.</p>
+					<h3>Signing Phrase to protect from phishing attacks</h3>
+					<p class="p-large">Status implements a signing phrase required to confirm and “sign” all transactions. The signing phrase is a 3 word phrase randomly generated for you and stored locally on your device that is presented each time you attempt to send a transaction. You will be presented your signing phrase and be required to accept it before a transaction will be confirmed. If you do not recognize your three words, or are not presented with the three words at all, cancel the transaction, log out of Status and report the issue to <a href="mailto:security@status.im">security@status.im</a></p>
+					<h3>Rigorous Auditing</h3>
+					<p class="p-large">As we reach major milestones in development, after rounds of internal review and auditing, we reach out to industry leading, third-party auditing firms to verify our sanity, and double/triple check the work that we do. These security audits are not guarantees of security in the projects they pertain to. They are additional checks from objective third parties to help bolster confidence in the security of intended functionality.</p>
+					<p class="p-large">If you find a bug or vulnerability in our code, please report it to <a href="mailto:security@status.im">security@status.im</a></p>
+					<h3>Educate yourself to stay safe</h3>
+					<p class="p-large">Decentralized, serverless products such as Status remove a number of unnecessary intermediaries, enabling you to chat, transact, and browse without fear of surveillance, censorship, and data leakage. This is because you are in control of your data and your own digital safety. Therefore, it is important you understand how to protect yourself. Learn more about how to stay safe with this Status Security Best Practice Guide.</p>
+					<p><a href="https://notes.status.im/Fa9h9kCVRtm82PcgQ31Y7w" target="_blank" class="link-arrow">See the Best Practice Guide</a></p>
+					<h3>Security Support</h3>
+					<p class="p-large">We’re here to help. If you have any questions or concerns about security, send an email to <a href="mailto:security@status.im">security@status.im</a> or reach out to us in the Status Security Public Channel <a href="https://get.status.im/chat/public/status-security" target="_blank">#status-security</a>.</p>
 					<h3>Bug Bounty Program</h3>
-					<p class="p-large">There are 3 ways you can get involved with the Status codebase: through Status Open Bounty, through finding bugs we’ve identified for beginners, or by fixing the stuff which irritates you most.</p>
-					<p class="p-large">So, you’ve got some experience as a developer, you’ve been eye-balling this whole crypto thing ever since that idiot Jim in your office told you about it over coffee a few years ago and you want to dip your toes into the water without taking the plunge? A lot of the smaller bugs and features we would like to fix are assigned as bounties at Status, which means you can earn some SNT for fixing issues as you learn your way around our code base. Simply go to Gitcoin, sign in using your GitHub profile and use the filters on that site to find recent issues that are both interesting to you and worth your time to fix.</p>
+					<p class="p-large">If you are a security researcher or developer and want to report a vulnerability, please contact <a href="mailto:security@status.im">security@status.im</a> regarding the Status Bug Bounty Program.  We also have a campaign with HackerOne, a bug bounty program that incentivizes hackers to look at projects.  For more information, go to our <a href="http://www.hackerone.com/status_im" target="_blank">security page</a>.  We’re actively ramping up our private campaign, and will open it to public disclosures soon!</p>
 				</div>
 			</div>
 		</div>
@@ -58,10 +75,10 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h3 class="m-t-50">Protect Yourself</h3>
-					<p class="teaser-2">With Status, you are in control of your data and your own digital safety. Therefore, it is important you understand how to protect yourself. Learn more about how to stay safe with this Security Best Practice Guide.</p>
+					<p class="teaser-2">Status is built with state of the art technology to ensure the product is a secure as possible. When it comes to navigating web3, you are in control. See our list of security best practices and take control.</p>
 					<ul class="inline-links">
-						<li><a href="https://notes.status.im/Fa9h9kCVRtm82PcgQ31Y7w" target="_blank" class="link-arrow">See the Best Practice Guide</a></li>
-						<li><a href="#"><%- image_tag("img/join-status-security.svg") %> Join Status Security Channel</a></li>
+						<li><a href="https://notes.status.im/Fa9h9kCVRtm82PcgQ31Y7w" target="_blank" class="link-arrow">Learn More</a></li>
+						<li><a href="https://get.status.im/chat/public/status-security" target="_blank"><%- image_tag("img/join-status-security.svg") %> Join Status Security Channel</a></li>
 					</ul>
 				</div>
 				<div class="col-md-6">

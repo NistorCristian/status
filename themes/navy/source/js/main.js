@@ -184,10 +184,10 @@ $(document).ready(function ($) {
 
   if ($('.open-issues').length) {
 
-    var html = '';
+    var htmlReact = '';
 
-    if (typeof Cookies.get('open-issues') !== 'undefined') {
-      $('.open-issues ul').append(localStorage.getItem('open-issues'));
+    if (typeof Cookies.get('open-issues-react') !== 'undefined') {
+      $('.open-issues-react').append(localStorage.getItem('open-issues-react'));
     } else {
       fetch('https://api.github.com/repos/status-im/status-react/issues?sort=created&per_page=30').then(function (response) {
         if (response.status !== 200) {
@@ -203,24 +203,23 @@ $(document).ready(function ($) {
             if (typeof element.pull_request === 'undefined') {
               if (i < 4) {
                 var current = new Date();
-                var labelsHtml = '';
+                var labelsHtml = '<div class="tags">';
                 var labels = element.labels;
                 labels.forEach(label => {
-                  labelsHtml += '<a href="' + label.url + '" target="_blank">' + label.name + '</a>';
+                  labelsHtml += '<div class="tag">' + label.name + '</div>';
                 });
-                html += '<li> \
+                labelsHtml += '</div>';
+                htmlReact += '<li> \
                         <div class="number">#' + element.number + '</div> \
                         <div class="details"> \
-                          <b><a href="' + element.url + '" target="_blank">' + element.title + '</a></b> \
-                          <div class="tags"> \
+                          <b><a href="' + element.html_url + '" target="_blank">' + element.title + '</a></b> \
                             ' + labelsHtml + ' \
+                          <div class="opened"> \
+                            Opened: <time>' + timeDifference(current, new Date(element.created_at)) + '</time> \
                           </div> \
-                        </div> \
-                        <div class="opened"> \
-                          Opened: <time>' + timeDifference(current, new Date(element.created_at)) + '</time> \
-                        </div> \
-                        <div class="activity"> \
-                          Last activity: <time>' + timeDifference(current, new Date(element.updated_at)) + '</time> \
+                          <div class="activity"> \
+                            Last activity: <time>' + timeDifference(current, new Date(element.updated_at)) + '</time> \
+                          </div> \
                         </div> \
                       </li>';
                 i++;
@@ -228,10 +227,63 @@ $(document).ready(function ($) {
             }
           });
 
-          localStorage.removeItem('open-issues');
-          localStorage.setItem('open-issues', html);
-          Cookies.set('open-issues', true, { expires: 1 });
-          $('.open-issues ul').append(html);
+          localStorage.removeItem('open-issues-react');
+          localStorage.setItem('open-issues-react', htmlReact);
+          Cookies.set('open-issues-react', true, { expires: 1 });
+          $('.open-issues-react').append(htmlReact);
+        });
+      }).catch(function (err) {
+        console.log('Fetch Error :-S', err);
+      });
+    }
+
+    var htmlGo = '';
+
+    if (typeof Cookies.get('open-issues-go') !== 'undefined') {
+      $('.open-issues-go').append(localStorage.getItem('open-issues-go'));
+    } else {
+      fetch('https://api.github.com/repos/status-im/status-go/issues?sort=created&per_page=30').then(function (response) {
+        if (response.status !== 200) {
+          console.log('Looks like there was a problem. Status Code: ' + response.status);
+          return;
+        }
+
+        response.json().then(function (data) {
+
+          var i = 0;
+
+          data.forEach(function (element) {
+            if (typeof element.pull_request === 'undefined') {
+              if (i < 4) {
+                var current = new Date();
+                var labelsHtml = '<div class="tags">';
+                var labels = element.labels;
+                labels.forEach(label => {
+                  labelsHtml += '<div class="tag">' + label.name + '</div>';
+                });
+                labelsHtml += '</div>';
+                htmlGo += '<li> \
+                        <div class="number">#' + element.number + '</div> \
+                        <div class="details"> \
+                          <b><a href="' + element.html_url + '" target="_blank">' + element.title + '</a></b> \
+                            ' + labelsHtml + ' \
+                          <div class="opened"> \
+                            Opened: <time>' + timeDifference(current, new Date(element.created_at)) + '</time> \
+                          </div> \
+                          <div class="activity"> \
+                            Last activity: <time>' + timeDifference(current, new Date(element.updated_at)) + '</time> \
+                          </div> \
+                        </div> \
+                      </li>';
+                i++;
+              }
+            }
+          });
+
+          localStorage.removeItem('open-issues-go');
+          localStorage.setItem('open-issues-go', htmlGo);
+          Cookies.set('open-issues-go', true, { expires: 1 });
+          $('.open-issues-go').append(htmlGo);
         });
       }).catch(function (err) {
         console.log('Fetch Error :-S', err);
