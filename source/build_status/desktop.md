@@ -5,24 +5,21 @@ title: Build Desktop
 
 # Build Status Desktop for Yourself!
 
-## Building a release package
+# Building a release package
 
 Run the following commands to build a Desktop package for the host environment:
 
 ``` bash
 git clone https://github.com/status-im/status-react.git
 cd status-react
-make setup
-. ~/.nix-profile/etc/profile.d/nix.sh
-make shell
 make release-desktop
 ```
 
 For a Windows build cross-compiled from Linux, replace `make release-desktop` with `make release-windows-desktop`.
 
-## Development environment setup
+# Development environment setup
 
-### To install react-native-cli with desktop commands support
+## To install react-native-cli with desktop commands support
 
 ``` bash
 git clone https://github.com/status-im/react-native-desktop.git
@@ -31,24 +28,21 @@ npm update
 npm install -g
 ```
 
-### To setup dev builds of status-react for Desktop
+## To setup dev builds of status-react for Desktop
 
 1. Run the following commands:
 
     ``` bash
     git clone https://github.com/status-im/status-react.git
     cd status-react
-    make setup
-    . ~/.nix-profile/etc/profile.d/nix.sh
-    make shell
     make startdev-desktop # note: wait until sources are compiled
     ```
 
 1. In separate terminal tab: `make react-native` (note: it starts react-native packager)
-1. In separate terminal tab: `node ./ubuntu-server.js`
+1. In separate terminal tab: `make desktop-server` (note: it runs `node ./ubuntu-server.js`)
 1. In separate terminal tab: `make run-desktop`
 
-### Notes
+## Notes
 
 - in order to run multiple Status Desktop instances, please specify values for the `REACT_SERVER_PORT`, `STATUS_NODE_PORT`, `STATUS_DATA_DIR` environment variables:
 
@@ -58,6 +52,7 @@ npm install -g
   export STATUS_DATA_DIR=~/status-files/data1 # this is where Realm data files, Geth node data, and logs will reside; also not strictly needed for dev alongside release
   ```
 
+  The Makefile already specifies default values that allow you to run a debug instance without clashing with the release version.
   Please be sure to run the instance with default parameters (without any explicit specification of variables above) first, as otherwise it will kill `ubuntu-server` processes that belong to other instances.
 
 - for complete cleanup of generated files and Realm data, issue:
@@ -67,11 +62,11 @@ npm install -g
   rm -rf desktop/modules
   ```
 
-### Clean up data
+## Clean up data
 
 To completely clean up data from previous development sessions, such as accounts, you need to do the following:
 
-#### On Linux
+### On Linux
 
 ``` bash
 # First kill the `ubuntu-server` process because it has a cache of realm db
@@ -83,11 +78,11 @@ rm -rf ~/.local/share/Status \
        $STATUS_REACT_HOME/status-react/default.realm*
 ```
 
-#### On a Mac
+### On a Mac
 
 Go to `~/Library/Application Support/` and delete any Status directories. Delete the app in `/Application`. Then reinstall.
 
-#### On Windows
+### On Windows
 
 ``` bash
 # First kill the `ubuntu-server` process because it has a cache of realm db
@@ -97,11 +92,11 @@ tskill ubuntu-server
 rd /S /Q %LOCALAPPDATA%\Status
 ```
 
-### Editor setup
+## Editor setup
 
 Running `make watch-desktop` will run a REPL on port 7888 by default. Some additional steps might be needed to connect to it.
 
-#### emacs-cider
+### emacs-cider
 
 In order to get REPL working, put the following config in `.dir-locals.el` :
 
@@ -113,7 +108,7 @@ In order to get REPL working, put the following config in `.dir-locals.el` :
 
 Then connect to the repl with `cider-connect-cljs` (default is localhost on port 7888)
 
-#### vim-fireplace
+### vim-fireplace
 
 For some reason there is no `.nrepl-port` file in project root, so `vim-fireplace` will not be able to connect automatically. You can either:
 
@@ -126,7 +121,7 @@ After Figwheel has connected to the app, run the following command inside Vim, a
 :Piggieback (figwheel-sidecar.repl-api/repl-env)
 ```
 
-### Configure logging output destination
+## Configure logging output destination
 
 - By default, application adds debug output into standard process output stream.
 - The app data folder location varies per platform. It's usually at:

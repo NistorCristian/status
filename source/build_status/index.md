@@ -22,7 +22,7 @@ cd status-react
 
 ### 2. Install the dependencies
 
-We created a special script that leverages [Nix](https://nixos.org/nix) to install everything Status needs with minimal impact to the user's system. However, this script has only been tested on macOS and Ubuntu Linux 18.04. If it doesn't work for you on another Linux distribution, please install all dependencies manually (you can find the list below).
+We created a special script that leverages [Nix](https://nixos.org/nix) to install everything Status needs with minimal impact to the user's system. However, this script has only been tested on macOS (with XCode 10.1), Ubuntu Linux 18.04 and Manjaro. If it doesn't work for you on another Linux distribution, please install all dependencies manually (you can find the list below).
 In order to make things as practical as possible, the script will auto-accept the Android SDK license agreements.
 
 If you're on NixOS, please run the following to ensure you have the necessary prerequisites available:
@@ -31,13 +31,7 @@ If you're on NixOS, please run the following to ensure you have the necessary pr
 nix-env --install git gnumake
 ```
 
-**(Ignore this if you're on NixOS)** Just run this to install all dependencies (you might need to enter your account password, namely on Arch Linux):
-
-```bash
-make setup
-```
-
-At the end of the script, follow the instructions to ensure that Nix is properly set up on your system. From then on, in order to work with status-react, you need to be inside a Nix shell. You can get there by typing `make shell`.
+In order to work with status-react, you need to be inside a Nix shell. The makefile targets will make sure you are in a Nix shell, or start one for you implicitly. However, if you're going to be running multiple commands in a shell, you might want to start a dedicated Nix shell by running `make shell`.
 
 The `make shell` script prepares and installs the following:
 
@@ -60,6 +54,8 @@ The `make shell` script prepares and installs the following:
 *Note 1:* It can take up to 20 minutes depending on your machine and internet connection speed.
 
 *Note 2:* Specific tool versions used are maintained in the [.TOOLVERSIONS](https://github.com/status-im/status-react/blob/develop/.TOOLVERSIONS) file.
+
+*Note 3:* On macOS, the build environment is set up to rely on XCode 10.1. If you want to use an unsupported version, you'll need to edit the version in the [derivation.nix](https://github.com/status-im/status-react/blob/develop/derivation.nix) file (`xcodewrapperArgs.version`).
 
 ## Running development processes
 
@@ -111,7 +107,7 @@ You can also start XCode and run the application there. Execute `open ios/Status
 
 ### Android
 
-Installation script installs Android SDK and Android NDK (if they are not present in `~/Android/Sdk/`).
+Installation script installs Android SDK and Android NDK (if they are not present in `~/.status/Android/Sdk/`).
 
 - *Optional:* If you want to use AVD (Android Virtual Device, emulator), please, check [this documentation](https://developer.android.com/studio/run/emulator);
 - *Optional:* If you don't like AVD, you can also use [Genymotion](https://genymotion.com);
