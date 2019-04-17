@@ -132,15 +132,13 @@ Check the following docs if you still have problems:
 
 ## Optional: Advanced build notes
 
-### Locally built status-go dependency
+### Building and using forks of status-go
 
-If you need to test a mobile build with a custom locally built status-go dependency, you can build it by following this process:
+If you need to use a branch of a status-go fork as a dependency of status-react, you can have the scripts build it by following this process:
 
-1. Ensure the `STATUS_GO_HOME` environment variable is set to the path of your local status-go repo (see [Build status-go](https://status.im/build_status/status_go.html) page for more information on requirements);
-2. From the root of the status-react repo, run `scripts/bundle-status-go.sh <platform>`, where `platform` can be `android` or `ios`;
-3. This will generate a build artifact under the status-react repo, and will be considered prioritary in the dependencies until it is deleted (e.g. by running `make clean` or `make prod-build`).
-
-*Note:* Desktop builds currently always download and build status-go locally.
+1. Change the contents of the `STATUS_GO_OWNER` file at the root of the project to contain the name of the owner of your GitHub status-go fork;
+1. From the root of the status-react repo, run `scripts/update-status-go.sh <branch-name>`, where `branch-name` is the name of the branch you want to build;
+1. If you are inside an Nix shell, make sure you exit it before starting a new build, so that the new dependency is taken into account.
 
 ## Debugging tips
 
