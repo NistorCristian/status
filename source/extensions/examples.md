@@ -19,7 +19,7 @@ DTwitter: ([Modify](https://status.im/extensions/play.html?hash=QmU1w3ZRGMSKHFzF
 
 Ethereum logs tests: ([Modify](https://status.im/extensions/play.html?hash=QmaKKKUgDsJKQJ5Q9BJg8V1SRDhhiKbyyQycoExF3eehUZ), [Install](https://get.status.im/extension/ipfs@QmaKKKUgDsJKQJ5Q9BJg8V1SRDhhiKbyyQycoExF3eehUZ))
 
-Status Principles: ([Modify](https://status.im/extensions/play.html?hash=QmSbBVf31sjoqTe5DRUSBd2ADVQejWRqduU3FgfbC32kjP), [Install](https://get.status.im/extension/ipfs@QmSbBVf31sjoqTe5DRUSBd2ADVQejWRqduU3FgfbC32kjP))
+Status Principles: ([Modify](https://status.im/extensions/play.html?hash=QmSvd5iehhrkSCQR12hEyJtJzCjEQo1ax8936BnkBhQi5a), [Install](https://get.status.im/extension/ipfs@QmSvd5iehhrkSCQR12hEyJtJzCjEQo1ax8936BnkBhQi5a))
 
 Gfycat: ([Modify](https://status.im/extensions/play.html?hash=Qmb1B3jXNdc9WZCcWFzpkTXtrurnKxYQFvUDhp2J4SVCCX), [Install](https://get.status.im/extension/ipfs@Qmb1B3jXNdc9WZCcWFzpkTXtrurnKxYQFvUDhp2J4SVCCX))
 
