@@ -5,48 +5,25 @@ title: Build Desktop
 
 # Build Status Desktop for Yourself!
 
-## Prerequisites
-
-You will need the following tools installed (running `make setup` is the preferred way to install prerequisites, as it will ensure you have the versions specified in the [.TOOLVERSIONS](https://github.com/status-im/status-react/blob/develop/.TOOLVERSIONS) file):
-
-- Clojure CLI tool `clj` https://clojure.org/guides/getting_started#_installation_on_mac_via_code_brew_code
-- Node.js
-- yarn (can be installed via `npm install -g yarn`)
-- CMake 3.1.0 or higher
-- Additional packages: `extra-cmake-modules`; Keychain access on `Linux` requires `libgnome-keyring0`.
-  - Linux: `sudo apt install extra-cmake-modules libgnome-keyring0`
-  - MacOS: `brew install kde-mac/kde/kf5-extra-cmake-modules`
-- Linux and MacOS:
-  - Qt 5.11.2 or higher. You'll only need macOS and QtWebEngine components installed.
-    - Linux: Qt 5.11.2 is available here: https://download.qt.io/archive/qt/5.11/5.11.2/qt-opensource-linux-x64-5.11.2.run
-
-## Qt setup (Linux and MacOS only)
-
-Set Qt's environment variables:
-
-- set `QT_PATH` to point to the location of Qt's distribution. It should not end with a slash.
-  - On MacOS and Linux: `export QT_PATH=/Users/<user_name>/Qt/5.11.2`
-- add path to qmake to `PATH` environment variable via
-  - On MacOS: `export PATH=<QT_PATH>/clang_64/bin:$PATH`
-  - On Linux: `export PATH=<QT_PATH>/gcc_64/bin:$PATH`
-
-# Building a release package
+## Building a release package
 
 Run the following commands to build a Desktop package for the host environment:
 
 ``` bash
 git clone https://github.com/status-im/status-react.git
 cd status-react
-npm install -g react-native-cli
+make setup
+. ~/.nix-profile/etc/profile.d/nix.sh
+make shell
 make prepare-desktop
 make release-desktop
 ```
 
 For a Windows build cross-compiled from Linux, replace `make release-desktop` with `make release-windows-desktop`.
 
-# Development environment setup
+## Development environment setup
 
-## To install react-native-cli with desktop commands support
+### To install react-native-cli with desktop commands support
 
 ``` bash
 git clone https://github.com/status-im/react-native-desktop.git
@@ -55,20 +32,24 @@ npm update
 npm install -g
 ```
 
-## To setup dev builds of status-react for Desktop
+### To setup dev builds of status-react for Desktop
 
 1. Run the following commands:
+
     ``` bash
     git clone https://github.com/status-im/status-react.git
     cd status-react
-    make prepare-desktop
+    make setup
+    . ~/.nix-profile/etc/profile.d/nix.sh
+    make shell
+    make startdev-desktop # note: wait until sources are compiled
     ```
-1. In separate terminal tab: `npm start` (note: it starts react-native packager )
-1. In separate terminal tab: `node ./ubuntu-server.js`
-1. In separate terminal tab: `make watch-desktop` (note: wait until sources are compiled)
-1. In separate terminal tab: `react-native run-desktop`
 
-## Notes
+1. In separate terminal tab: `make react-native` (note: it starts react-native packager)
+1. In separate terminal tab: `node ./ubuntu-server.js`
+1. In separate terminal tab: `make run-desktop`
+
+### Notes
 
 - in order to run multiple Status Desktop instances, please specify values for the `REACT_SERVER_PORT`, `STATUS_NODE_PORT`, `STATUS_DATA_DIR` environment variables:
 
@@ -87,11 +68,11 @@ npm install -g
   rm -rf desktop/modules
   ```
 
-## Clean up data
+### Clean up data
 
 To completely clean up data from previous development sessions, such as accounts, you need to do the following:
 
-### On Linux
+#### On Linux
 
 ``` bash
 # First kill the `ubuntu-server` process because it has a cache of realm db
@@ -103,11 +84,11 @@ rm -rf ~/.local/share/Status \
        $STATUS_REACT_HOME/status-react/default.realm*
 ```
 
-### On a Mac
+#### On a Mac
 
 Go to `~/Library/Application Support/` and delete any Status directories. Delete the app in `/Application`. Then reinstall.
 
-### On Windows
+#### On Windows
 
 ``` bash
 # First kill the `ubuntu-server` process because it has a cache of realm db
@@ -117,11 +98,11 @@ tskill ubuntu-server
 rd /S /Q %LOCALAPPDATA%\Status
 ```
 
-## Editor setup
+### Editor setup
 
 Running `make watch-desktop` will run a REPL on port 7888 by default. Some additional steps might be needed to connect to it.
 
-### emacs-cider
+#### emacs-cider
 
 In order to get REPL working, put the following config in `.dir-locals.el` :
 
@@ -133,7 +114,7 @@ In order to get REPL working, put the following config in `.dir-locals.el` :
 
 Then connect to the repl with `cider-connect-cljs` (default is localhost on port 7888)
 
-### vim-fireplace
+#### vim-fireplace
 
 For some reason there is no `.nrepl-port` file in project root, so `vim-fireplace` will not be able to connect automatically. You can either:
 
@@ -146,7 +127,7 @@ After Figwheel has connected to the app, run the following command inside Vim, a
 :Piggieback (figwheel-sidecar.repl-api/repl-env)
 ```
 
-## Configure logging output destination
+### Configure logging output destination
 
 - By default, application adds debug output into standard process output stream.
 - The app data folder location varies per platform. It's usually at:
