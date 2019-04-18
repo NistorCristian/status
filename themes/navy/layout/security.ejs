@@ -41,7 +41,7 @@
 					<p class="p-large">Status uses the Whisper protocol for peer-to-peer (p2p) communication, which means that there are no servers processing or storing your messages. Instead, Whisper relies on a network of peers to route messages to each other. Each message sent is broadcast to the entire network, and encrypted for only the intended recipient to open. The effect of every message flooding the network is known as dark routing, and protects not only the content of your messages but also metadata about where you are communicating from, to whom, etc. This is the highest standard of security and privacy in online messaging, and the Status team is researching more scalable and efficient means of delivering this standard.</p> 
 					<p><a href="/research/" class="link-arrow">Learn more about Whisper</a></p>
 					<h3>End-to-End Encryption by Default</h3>
-					<p class="p-large">All messages sent over Whisper are encrypted end-to-end by default. When you create a Status account, a cryptographic keypair is generated to encrypt your messages and stored locally on your device. When you add a new contact in Status, you exchange public keys so that that person can decrypt your messages when received over the network.</p>
+					<p class="p-large">All private messages sent over Whisper are encrypted end-to-end by default. When you create a Status account, a cryptographic keypair is generated to encrypt your messages and stored locally on your device. When you add a new contact in Status, you exchange public keys so that that person can decrypt your messages when received over the network.</p>
 					<h3>Perfect Forward Secrecy</h3>
 					<p class="p-large">PFS is a feature of specific key-agreement protocols which provide assurances that your session keys will not be compromised even if the private keys of the participants are compromised. Specifically, past messages cannot be decrypted by a third-party who manages to get a hold of a private key. It builds on the X3DH and Double Ratchet specifications from Open Whisper Systems, with some adaptations to operate in a decentralized environment. Perfect Forward Secrecy is an added layer of security for all of your 1:1 private chats.</p>
 					<p><a href="/research/pfs.html" class="link-arrow">Learn more about PFS</a></p>
@@ -50,9 +50,10 @@
 					<h3>How are my keys generated?</h3>
 					<p class="p-large">TBD</p>
 					<h3>How are my keys stored?</h3>
-					<p class="p-large">TBD</p>
+					<p class="p-large">Status will never use third party services for managing and storing your public and private keys. Once generated, the first BIP44 key is saved in a keystore json file locally on your device. This file is encrypted with the password you choose for your Status account and only accessible by the Status app.</p>
 					<h3>Secure Browsing</h3>
-					<p class="p-large">TBD</p>
+					<p class="p-large">The Status browser is designed to keep the end user informed and their funds safe. Browser Privacy mode is enabled by default. This means that DApps will be required to ask permission before connecting to your wallet, and it may cause some DApps to break (if they are not compatible with this security measure). Finally, the Status browser implements EIP712 which aims to improve the usability of off-chain message signing for use on-chain. We are seeing growing adoption of off-chain message signing as it saves gas and reduces the number of transactions on the blockchain. Currently signed messages are an opaque hex string displayed to the user with little context about the items that make up the message. </p>
+					<p><a href="https://eips.ethereum.org/EIPS/eip-712" target="_blank" class="link-arrow">Learn more about the EIP</a></p>
 					<h3>How does Status protect my cryptocurrency?</h3>
 					<p class="p-large">Status is built with a non-custodial wallet, giving you full control over your funds without the use of a server. The private keys are stored in an encrypted manner on your device. Your money is under your control, and cannot be accessed by anyone without the private key. Therefore, if you lose your mnemonic phrase, you will never be able to restore access to your funds. So keep your private keys somewhere safely offline.</p>
 					<h3>Signing Phrase to protect from phishing attacks</h3>

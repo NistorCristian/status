@@ -611,11 +611,34 @@ header{
                     }
                 }
                 &.has-submenu{
+                    a{
+                        position: relative;
+                        &:before{
+                            content: '';
+                            width: calc(100% + 50px);
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            transform: translateX(-25px);
+                            display: none;
+                        }
+                    }
                     &:hover{
+                        a{
+                            &:before{
+                                display: block;
+                            }
+                        }
                         .submenu{
                             opacity: 1;
                             visibility: visible;
                             pointer-events: all;
+                            a{
+                                &:before{
+                                    display: none;
+                                }
+                            }
                         }
                     }
                     .submenu{
@@ -671,6 +694,9 @@ header{
                                     color: $dark-grey;
                                     font-family: $manrope;
                                     font-weight: $manrope-semi-bold;
+                                    &:before{
+                                        display: none;
+                                    }
                                     &:after{
                                         background-image: url(../img/icon-arrow-right.svg);
                                     }
@@ -1144,7 +1170,7 @@ footer{
                 }
             }
         }
-        blockquote{
+        .teaser-1{
             max-width: 780px;
             margin: 100px auto 0;
             span{
@@ -2734,10 +2760,17 @@ footer{
     .about-principles{
         .roman-list{
             h4{
-                padding: 0 30px;
+                padding: 0 45px;
             }
             p{
-                padding: 0 30px;
+                padding: 0 45px;
+            }
+        }
+    }
+    .about-mission{
+        .inner{
+            .teaser-1{
+                margin-top: 50px;
             }
         }
     }
@@ -2902,6 +2935,15 @@ footer{
         .mobile-nav{
             nav{
                 display: flex;
+                ul{
+                    li.has-submenu:hover{
+                        a{
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
+                }
             }
             .btns{
                 display: block;
@@ -2958,6 +3000,9 @@ footer{
     }
     .get-involved-box-links .box-link{
         padding: 30px 20px;
+    }
+    .features-desktop img {
+        max-width: 100%;
     }
 }
 
@@ -3202,7 +3247,6 @@ footer{
         }
     }
     .features-desktop {
-        padding-top: 0;
         .inner{
             padding-bottom: 15px;
         }
@@ -3244,7 +3288,7 @@ footer{
         padding-top: 30px;
         .inner{
             text-align: left;
-            blockquote{
+            .teaser-1{
                 display: none;
             }
             .inline-links{
@@ -3267,6 +3311,11 @@ footer{
         .roman-list{
             h4{
                 margin-top: 40px;
+                padding: 0;
+                &:before{
+                    position: relative;
+                    margin-right: 15px;
+                }
             }
             p{
                 padding: 0;

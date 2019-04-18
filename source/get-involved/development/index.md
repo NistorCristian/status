@@ -1,4 +1,0 @@
----
-title: Development
-layout: development
----

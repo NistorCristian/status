@@ -147,11 +147,19 @@ $(document).ready(function ($) {
   });
 
   if ($('.home-intro .announcement').length) {
+    var ghostContentKey = 'c6717eab3d9a3e6be361980f66';
     $.ajax({
-      url: 'https://our-status.hauntedthemes.com/ghost/api/v2/content/posts/?key=c6717eab3d9a3e6be361980f66&limit=1&fields=title,url'
+      url: 'https://our.status.im/ghost/api/v2/content/posts/?key=' + ghostContentKey + '&limit=1&fields=title,url'
     }).done(function (results) {
       $('.home-intro .announcement b').text(results.posts[0].title);
       $('.home-intro .announcement').attr('href', results.posts[0].url).removeClass('inactive');
+    }).fail(function () {
+      $.ajax({
+        url: 'https://our.status.im/ghost/api/v0.1/posts/?include=tags&formats=plaintext&client_id=ghost-frontend&client_secret=2b055fcd57ba&limit=1'
+      }).done(function (results) {
+        $('.home-intro .announcement b').text(results.posts[0].title);
+        $('.home-intro .announcement').attr('href', 'https://our.status.im' + results.posts[0].url).removeClass('inactive');
+      });
     });
   }
 

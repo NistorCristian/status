@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- Page Meta -->
-    <title><% if (page.title) { %><%= page.title %> | <% } %><%= config.title %></title>
+    <title>Status <% if (page.title) { %>- <%= page.title %><% } %></title>
+    <% if (page.description) { %><meta name="description" content="<%= page.description %>" /><% } %>
 
     <!-- Mobile Meta -->
     <meta name="HandheldFriendly" content="True" />
@@ -30,6 +31,24 @@
     <meta name="msapplication-TileColor" content="#4360DF">
     <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#4360DF">
+
+    <meta property="og:site_name" content="Status" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Status <% if (page.title) { %>- <%= page.title %><% } %>" />
+    <% if (page.description) { %><meta property="og:description" content="<%= page.description %>" /><% } %>
+    <meta property="og:url" content="<%= page.permalink %>" />
+    <% if (page.layout == 'get') { %><meta property="og:image" content="<%= config.url %>/img/share-get-status.png" /><% } %>
+    <% if (page.layout != 'get') { %><meta property="og:image" content="<%= config.url %>/img/share.png" /><% } %>
+    <meta property="article:publisher" content="https://www.facebook.com/ethstatus" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Status <% if (page.title) { %>- <%= page.title %><% } %>" />
+    <% if (page.description) { %><meta property="twitter:description" content="<%= page.description %>" /><% } %>
+    <meta name="twitter:url" content="<%= page.permalink %>" />
+    <% if (page.layout == 'get') { %><meta property="twitter:image" content="<%= config.url %>/img/share-get-status.png" /><% } %>
+    <% if (page.layout != 'get') { %><meta property="twitter:image" content="<%= config.url %>/img/share.png" /><% } %>
+    <meta name="twitter:site" content="@ethstatus" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
 
     <!-- Styles'n'Scripts -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai-sublime.min.css">
