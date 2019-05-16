@@ -49,6 +49,7 @@ docs:
     sdk_authentication: sdk_authentication.html (SDK Authentication)
     sdk_create_wallet: sdk_create_wallet.html (SDK Create Wallet)
     sdk_derivation_sign: sdk_derivation_sign.html (SDK Derivation Sign)
+    sdk_pinless: sdk_pinless.html (SDK Pinless)
     sdk_export: sdk_export.html (SDK Export)
     sdk_duplication: sdk_duplication.html (SDK Duplication)
     apdu_overview: apdu_overview.html (APDU Overview)

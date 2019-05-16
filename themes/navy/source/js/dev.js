@@ -12,7 +12,11 @@ $(document).ready(function($) {
     mobileFooterMenu(w);
   });
 
-  $('.about-mission .inner .inline-links a').on('click', function() {
+  $('.items').masonry({
+    itemSelector: '.item',
+  })
+
+  $('.about-mission .inner .inline-links a, .snt-intro .inline-links a').on('click', function() {
     var id = $(this).attr('href');
     $('html, body').animate({
       scrollTop: $(id).offset().top + 5
@@ -106,12 +110,12 @@ $(document).ready(function($) {
         success: function(response) {
           $.each(response, function(index, program) {
             var description = program.description.substr(0, 200) + '...';
-            $('#advocacy-programs').prepend(`<div class="inner">
-                <a href="https://statusphere.status.im/b/${program.uuid}/view" class="card-inner">
-                  ${program.title}
-                </a>
-                <p class="details">${description}</p>
-              </div>`);
+            $('#advocacy-programs').prepend('<div class="inner"> \
+                <a href="https://statusphere.status.im/b/'+ program.uuid+'/view" class="card-inner"> \
+                  '+program.title+'\
+                </a> \
+                <p class="details">'+description+'</p> \
+              </div>');
           });
         }
       });
@@ -156,7 +160,7 @@ $(document).ready(function($) {
   });
 
   if ($('.home-intro .announcement').length) {
-    var ghostContentKey = 'c6717eab3d9a3e6be361980f66';
+    var ghostContentKey = '10e7f8c1f793d2945ea1177076';
     $.ajax({
       url: 'https://our.status.im/ghost/api/v2/content/posts/?key='+ ghostContentKey +'&limit=1&fields=title,url'
     })
@@ -213,8 +217,7 @@ $(document).ready(function($) {
         .then(
           function(response) {
             if (response.status !== 200) {
-              console.log('Looks like there was a problem. Status Code: '
-                + response.status);
+              console.log('Looks like there was a problem. Status Code: ' + response.status);
               return;
             }
 
@@ -228,7 +231,7 @@ $(document).ready(function($) {
                     var current= new Date();
                     var labelsHtml = '<div class="tags">';
                     var labels = element.labels;
-                    labels.forEach(label => {
+                    labels.forEach(function(label){
                       labelsHtml += '<div class="tag">'+ label.name +'</div>'
                     });
                     labelsHtml += '</div>';
@@ -288,7 +291,7 @@ $(document).ready(function($) {
                     var current= new Date();
                     var labelsHtml = '<div class="tags">';
                     var labels = element.labels;
-                    labels.forEach(label => {
+                    labels.forEach(function(label){
                       labelsHtml += '<div class="tag">'+ label.name +'</div>'
                     });
                     labelsHtml += '</div>';

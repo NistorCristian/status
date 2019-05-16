@@ -88,10 +88,11 @@ sidebar:
     sdk_authentication: User authentication
     sdk_create_wallet: Wallet creation
     sdk_derivation_sign: Derivation & signing
+    sdk_pinless: Pinless Signing
     sdk_export: Exporting keys
     sdk_duplication: Card duplication
     apdu: Protocol
-    apdu_overview: Ovierview
+    apdu_overview: Overview
     apdu_changelog: Changelog
     apdu_select: SELECT
     apdu_init: INIT
