@@ -2038,7 +2038,6 @@ img.qr-code {
         bottom: 0;
         right: 20px; }
     .snt-basics ul li .inner {
-      position: relative;
       z-index: 2;
       display: flex;
       flex-direction: column;
@@ -2071,7 +2070,7 @@ img.qr-code {
     background: #F4F5F7;
     width: calc(50% - 30px);
     margin: 15px;
-    transition: all .3s ease; }
+    transition: background .3s ease, box-shadow .3s ease; }
     .using-snt .items .item img {
       max-width: 100%; }
     .using-snt .items .item:hover {
@@ -2315,6 +2314,13 @@ img.qr-code {
       margin-bottom: 40px;
       font-size: 12px;
       line-height: 18px; }
+  .snt-intro img {
+    width: 100px; }
+  .snt-intro nav ul {
+    margin-bottom: 50px; }
+    .snt-intro nav ul li {
+      width: auto;
+      margin: 0 20px; }
   .using-snt .items .item img {
     max-width: calc(100% - 120px); }
   .using-snt .items .item:nth-child(1) img, .using-snt .items .item:nth-child(2) img {
@@ -2422,11 +2428,6 @@ img.qr-code {
     padding: 30px 20px; }
   .features-desktop img {
     max-width: 100%; }
-  .snt-intro img {
-    width: 100px; }
-  .snt-intro nav ul li {
-    width: auto;
-    margin: 0 20px; }
   .snt-basics ul {
     flex-wrap: wrap; }
     .snt-basics ul li {
@@ -2441,7 +2442,7 @@ img.qr-code {
 @media screen and (max-width: 991px) {
   br {
     display: none; }
-  .editor-content br {
+  .editor-content br, p br {
     display: block; }
   .home-intro img {
     width: 200%;
