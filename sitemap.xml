@@ -58,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/contribute/faqs.html</loc>
+    <loc>https://dev.status.im/developer_tools/assets_guidelines.html</loc>
     
     <lastmod>2019-05-03T15:35:46.239Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/developer_tools/assets_guidelines.html</loc>
+    <loc>https://dev.status.im/contribute/faqs.html</loc>
     
     <lastmod>2019-05-03T15:35:46.239Z</lastmod>
     
@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/security/index.html</loc>
+    <loc>https://dev.status.im/security/sec_matters.html</loc>
     
     <lastmod>2019-04-23T20:09:40.843Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/security/sec_matters.html</loc>
+    <loc>https://dev.status.im/security/index.html</loc>
     
     <lastmod>2019-04-23T20:09:40.843Z</lastmod>
     
@@ -205,14 +205,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/join/index.html</loc>
+    <loc>https://dev.status.im/index.html</loc>
     
     <lastmod>2019-04-23T20:09:40.831Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/index.html</loc>
+    <loc>https://dev.status.im/join/index.html</loc>
     
     <lastmod>2019-04-23T20:09:40.831Z</lastmod>
     
@@ -254,14 +254,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/get-involved/community-groups/index.html</loc>
+    <loc>https://dev.status.im/get-involved/developers/index.html</loc>
     
     <lastmod>2019-04-23T20:09:40.826Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/get-involved/developers/index.html</loc>
+    <loc>https://dev.status.im/get-involved/community-groups/index.html</loc>
     
     <lastmod>2019-04-23T20:09:40.826Z</lastmod>
     
@@ -310,14 +310,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/docs/run_status_node.html</loc>
+    <loc>https://dev.status.im/docs/technical_documentation.html</loc>
     
     <lastmod>2019-04-23T20:09:40.820Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/docs/technical_documentation.html</loc>
+    <loc>https://dev.status.im/docs/run_status_node.html</loc>
     
     <lastmod>2019-04-23T20:09:40.820Z</lastmod>
     
@@ -331,14 +331,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/docs/contributor_guide.html</loc>
+    <loc>https://dev.status.im/docs/FAQs.html</loc>
     
     <lastmod>2019-04-23T20:09:40.818Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/docs/FAQs.html</loc>
+    <loc>https://dev.status.im/docs/contributor_guide.html</loc>
     
     <lastmod>2019-04-23T20:09:40.818Z</lastmod>
     
@@ -429,14 +429,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/analytics/ens_registration.html</loc>
+    <loc>https://dev.status.im/analytics/index.html</loc>
     
     <lastmod>2019-04-23T20:09:40.804Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/analytics/index.html</loc>
+    <loc>https://dev.status.im/analytics/ens_registration.html</loc>
     
     <lastmod>2019-04-23T20:09:40.804Z</lastmod>
     
@@ -492,14 +492,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/stable/index.html</loc>
+    <loc>https://dev.status.im/statusphere/index.html</loc>
     
     <lastmod>2019-04-19T17:24:53.055Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/statusphere/index.html</loc>
+    <loc>https://dev.status.im/stable/index.html</loc>
     
     <lastmod>2019-04-19T17:24:53.055Z</lastmod>
     
@@ -534,14 +534,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/security/sec_experiment.html</loc>
+    <loc>https://dev.status.im/security/sec_existing_features.html</loc>
     
     <lastmod>2019-04-19T17:24:53.050Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/security/sec_existing_features.html</loc>
+    <loc>https://dev.status.im/security/sec_experiment.html</loc>
     
     <lastmod>2019-04-19T17:24:53.050Z</lastmod>
     
@@ -583,14 +583,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/sdk_securechannel.html</loc>
+    <loc>https://dev.status.im/keycard_api/sdk_preparation.html</loc>
     
     <lastmod>2019-04-19T17:24:53.032Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/sdk_preparation.html</loc>
+    <loc>https://dev.status.im/keycard_api/sdk_securechannel.html</loc>
     
     <lastmod>2019-04-19T17:24:53.032Z</lastmod>
     
@@ -653,14 +653,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/apdu_sign.html</loc>
+    <loc>https://dev.status.im/keycard_api/apdu_unblockpin.html</loc>
     
     <lastmod>2019-04-19T17:24:53.023Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/apdu_unblockpin.html</loc>
+    <loc>https://dev.status.im/keycard_api/apdu_sign.html</loc>
     
     <lastmod>2019-04-19T17:24:53.023Z</lastmod>
     
@@ -674,13 +674,6 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/apdu_setndef.html</loc>
-    
-    <lastmod>2019-04-19T17:24:53.021Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://dev.status.im/keycard_api/apdu_select.html</loc>
     
     <lastmod>2019-04-19T17:24:53.021Z</lastmod>
@@ -688,9 +681,9 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/apdu_removekey.html</loc>
+    <loc>https://dev.status.im/keycard_api/apdu_setndef.html</loc>
     
-    <lastmod>2019-04-19T17:24:53.020Z</lastmod>
+    <lastmod>2019-04-19T17:24:53.021Z</lastmod>
     
   </url>
   
@@ -702,14 +695,21 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/apdu_opensecurechannel.html</loc>
+    <loc>https://dev.status.im/keycard_api/apdu_removekey.html</loc>
+    
+    <lastmod>2019-04-19T17:24:53.020Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://dev.status.im/keycard_api/apdu_mutuallyauthenticate.html</loc>
     
     <lastmod>2019-04-19T17:24:53.018Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/apdu_mutuallyauthenticate.html</loc>
+    <loc>https://dev.status.im/keycard_api/apdu_opensecurechannel.html</loc>
     
     <lastmod>2019-04-19T17:24:53.018Z</lastmod>
     
@@ -744,14 +744,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/apdu_generatekey.html</loc>
+    <loc>https://dev.status.im/keycard_api/apdu_exportkey.html</loc>
     
     <lastmod>2019-04-19T17:24:53.014Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/apdu_exportkey.html</loc>
+    <loc>https://dev.status.im/keycard_api/apdu_generatekey.html</loc>
     
     <lastmod>2019-04-19T17:24:53.014Z</lastmod>
     
@@ -765,14 +765,14 @@
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/apdu_changepin.html</loc>
+    <loc>https://dev.status.im/keycard_api/apdu_derivekey.html</loc>
     
     <lastmod>2019-04-19T17:24:53.012Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dev.status.im/keycard_api/apdu_derivekey.html</loc>
+    <loc>https://dev.status.im/keycard_api/apdu_changepin.html</loc>
     
     <lastmod>2019-04-19T17:24:53.012Z</lastmod>
     
