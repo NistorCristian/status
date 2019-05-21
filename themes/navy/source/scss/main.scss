@@ -2641,6 +2641,7 @@ img.qr-code{
             overflow: hidden;
             margin-left: -10px;
             transition: all .3s ease;
+            flex-direction: column;
             &.has-link:hover{
                 background: #6380FF;
                 transform: translateY(-10px);
@@ -2657,6 +2658,7 @@ img.qr-code{
                             left: 0;
                             width: 100%;
                             height: 100%;
+                            z-index: 2;
                         }
                     }
                 }
@@ -2694,11 +2696,13 @@ img.qr-code{
                 height: 100%;
                 h4{
                     margin-bottom: 30px;
+                    align-self: stretch;
                 }
                 p{
                     font-size: 15px;
                     line-height: 24px;
                     color: rgba( $white, .8 );
+                    align-self: stretch;
                 }
                 .link-arrow{
                     margin-top: auto;
@@ -2730,6 +2734,7 @@ img.qr-code{
             width: calc(50% - 30px);
             margin: 15px;
             transition: background .3s ease, box-shadow .3s ease;
+            position: relative;
             img{
                 max-width: 100%;
             }
@@ -2787,7 +2792,7 @@ img.qr-code{
             &:nth-child(8){
                 img{
                     display: block;
-                    margin: -30px auto 0;
+                    margin: 0 auto;
                 }
             }
             .inner{
@@ -3788,12 +3793,11 @@ img.qr-code{
             margin-top: 0;
         }
         nav{
-            display: none;
             ul{
-                margin-bottom: 60px;
+                margin: -20px 0;
                 li{
-                    justify-content: center;
-                    margin: 10px 0;
+                    justify-content: flex-start;
+                    margin: 5px 0;
                     width: 100%;
                 }
             }
@@ -3820,6 +3824,42 @@ img.qr-code{
                 margin: 5px 15px;
                 &:first-child{
                     margin-top: 0;
+                }
+                &:nth-child(1){
+                    order: 1;
+                }
+                &:nth-child(2){
+                    order: 2;
+                }
+                &:nth-child(3){
+                    order: 4;
+                    img{
+                        margin: 0 auto 30px;
+                    }
+                }
+                &:nth-child(4){
+                    order: 3;
+                }
+                &:nth-child(5){
+                    order: 6;
+                }
+                &:nth-child(6){
+                    order: 5;
+                    img{
+                        margin-top: 30px;
+                    }
+                }
+                &:nth-child(7){
+                    order: 8;
+                    img{
+                        margin-bottom: 30px;
+                    }
+                }
+                &:nth-child(8){
+                    order: 7;
+                }
+                &:nth-child(9){
+                    order: 9;
                 }
             }
         }
